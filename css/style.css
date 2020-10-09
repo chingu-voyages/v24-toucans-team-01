@@ -1,0 +1,49 @@
+* 
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	
+
+}
+
+html {
+	/* this defines what 1 rem is */
+	font-size: 62.5%; /* 1rem = 10px; 10px/16px = 62.5 */
+
+}
+
+section {
+    font-size: 5rem;
+    min-height: 20rem;
+    color: white;
+}
+
+.navigation {
+    background-color: red;
+    min-height: 10rem;
+    font-size: 5rem;
+    
+    
+}
+
+
+.hero {
+    background-color: green;
+    
+}
+
+.about-us {
+    background-color: violet;
+}
+
+.store {
+    background-color:dodgerblue;
+}
+.footer {
+    font-size: 5rem;
+}
+
+
