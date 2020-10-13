@@ -1,10 +1,12 @@
 {
   "name": "v24-toucans-team-01",
   "version": "1.0.0",
-  "description": "Chingu voyage team work.",
-  "main": "main.js",
+  "description": "Add-project-description-here | Voyage-24 | https://chingu.io/",
+  "main": "js/main.js",
   "scripts": {
-    "test": "jest"
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test":"jest"
   },
   "repository": {
     "type": "git",
@@ -23,11 +25,13 @@
   ],
   "author": "",
   "license": "MIT",
+
   "bugs": {
     "url": "https://github.com/chingu-voyages/v24-toucans-team-01/issues"
   },
   "homepage": "https://github.com/chingu-voyages/v24-toucans-team-01#readme",
   "devDependencies": {
+
     "babel-eslint": "^10.1.0",
     "eslint": "^7.11.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -37,5 +41,8 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.4",
     "prettier": "^2.1.2"
-  }
+    "parcel-bundler": "^1.12.4"
+  },
+  "browserslist": ["last 1 Chrome version"]
+
 }
