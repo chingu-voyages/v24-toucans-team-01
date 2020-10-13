@@ -1,3 +1,3 @@
-import {greeting} from "./product-list.js";
+import { greeting } from './product-list.js';
 
 greeting();
