@@ -8,6 +8,7 @@
     "build": "parcel build index.html",
     "test": "jest"
   },
+  "type":"module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chingu-voyages/v24-toucans-team-01.git"
@@ -33,8 +34,8 @@
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "7.21.4",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.21.4",
     "prettier": "^2.1.2",
     "parcel-bundler": "^1.12.4"
   },
