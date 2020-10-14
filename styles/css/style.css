@@ -1,16 +1,17 @@
 *,
 *::after,
 *::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
 
 }
 
 html {
-	/* this defines what 1 rem is */
-	font-size: 62.5%; /* 1rem = 10px; 10px/16px = 62.5% */
+    /* this defines what 1 rem is */
+    font-size: 62.5%;
+    /* 1rem = 10px; 10px/16px = 62.5% */
 
 }
 
@@ -31,14 +32,15 @@ section {
     width: 100%;
     position: fixed;
     top: 0;
-    
-    
+
+
 }
 
 .logo__img {
     width: 5rem;
     margin-top: 1.2rem;
-    margin-left: 2rem;;
+    margin-left: 2rem;
+    ;
 }
 
 
@@ -60,6 +62,7 @@ section {
     outline: none;
     transition: all .3s ease-in-out;
 }
+
 .navigation__link:hover,
 .navigation__link:focus {
     color: #713c71;
@@ -68,10 +71,11 @@ section {
 .header__phone {
     font-family: 'Kaushan Script', cursive;
     font-size: 2.4rem;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-} 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .header__phone--link {
     text-decoration: none;
     color: #362478;
@@ -79,8 +83,8 @@ section {
 }
 
 .header__phone--link:before {
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900; 
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     content: "\f879";
     font-size: 2rem;
 }
@@ -96,13 +100,13 @@ section {
     align-self: center;
     border: 2px solid #362478;
     border-radius: 8px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding-left: 1rem;
     padding-right: 1rem;
     cursor: pointer;
-    
+
 }
 
 .cart__box:hover {
@@ -126,7 +130,7 @@ section {
 .hero {
     padding-top: 30rem;
     background-color: green;
-    
+
 }
 
 .about-us {
@@ -134,10 +138,18 @@ section {
 }
 
 .store {
-    background-color:dodgerblue;
+    background-color: dodgerblue;
+    text-align: center;
 }
+
+.store h1 {
+    font-family: 'Kaushan Script',
+        cursive;
+    font-size: 8rem;
+    color: white;
+}
+.product-
+
 .footer {
     font-size: 1rem;
 }
-
-

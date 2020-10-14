@@ -1,64 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="stylesheet" href="/styles/css/style.css" />
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png">
-        <link rel="stylesheet" href="/styles/css/style.css">
+    <!--Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 
-        <!--Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet" />
 
-        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <title>Cake Store</title>
+  </head>
 
-        <title>Cake Store</title>
-    </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <a href="#" class="logo__link">
+          <img src="/assets/img/logo.png" alt="Logo" class="logo__img" />
+        </a>
+      </div>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">About Us</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Store</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__phone">
+        <a href="#" class="header__phone--link">+123456789</a>
+      </div>
+      <div class="cart__box">
+        <div class="cart__text">
+          <i class="fas fa-shopping-cart"></i> <span class="cart__items-number">2 items</span>-<span class="cart__items-text">$10.49</span>
+        </div>
+      </div>
+    </header>
+    <section class="hero">Hero section</section>
+    <section class="about-us">About us section</section>
+    <section class="store">
+      <h1>Our Store</h1>
+      <div class="product-categories">
+        <button class="product-category">All</button>
+        <button class="product-category">Cakes</button>
+        <button class="product-category">Cupcakes</button>
+        <button class="product-category">Sweets</button>
+        <button class="product-category">Dougnut</button>
+      </div>
+      <form>
+        <button type="submit"><i class="fa fa-search"></i></button>
+        <input type="text" placeholder="Search.." name="search" />
+      </form>
+      <div class="product-card" data-id="">
+        <img src="https://images.unsplash.com/photo-1586985289906-406988974504?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" />
+        <div class="product-card-body">
+          <h4 class="product-card-title">chocolate cake</h4>
+          <h5 class="product-card-price">$10.44</h5>
+        </div>
+        <div class="product-card-footer">
+          <button class="add-to-cart">Add to cart</button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from
+      <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    </footer>
 
-    <body>
-        <header class="header">
-            <div class="header__logo">
-                <a href="#" class="logo__link">
-                    <img src="/assets/img/logo.png" alt="Logo" class="logo__img">
-                </a>
-            </div>
-            <nav class="navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">Home</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">About Us</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">Store</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header__phone">
-                <a href="#" class="header__phone--link">+123456789</a>
-            </div>
-            <div class="cart__box">
-                <div class="cart__text">
-                    <i class="fas fa-shopping-cart"></i> <span class="cart__items-number">2 items</span>-<span class="cart__items-text">$10.49</span>
-                </div>
-            </div>
-        </header>
-        <section class="hero">
-            Hero section
-        </section>
-        <section class="about-us">
-            About us section
-        </section>
-        <section class="store">
-            Store section
-        </section>
-        <footer class="footer">
-            Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
-                title="Flaticon"> www.flaticon.com</a>
-        </footer>
-
-        <script src="js/main.js"></script>
-    </body>
-
+    <script src="js/main.js"></script>
+  </body>
 </html>
