@@ -8,7 +8,6 @@
     "build": "parcel build index.html",
     "test": "jest"
   },
-  "type":"module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chingu-voyages/v24-toucans-team-01.git"
