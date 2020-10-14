@@ -1,0 +1,216 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+
+}
+
+html {
+	/* this defines what 1 rem is */
+	font-size: 62.5%; /* 1rem = 10px; 10px/16px = 62.5% */
+
+}
+
+section {
+    font-size: 5rem;
+    min-height: 80rem;
+    color: white;
+}
+
+.header {
+    background-color: #ffffff;
+    min-height: 7.6rem;
+    font-size: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    
+    
+}
+
+.logo__img {
+    width: 5rem;
+    margin-top: 1.2rem;
+    margin-left: 2rem;;
+}
+
+
+
+.navigation__item {
+    display: inline-block;
+
+}
+
+.navigation__item:not(:last-child) {
+    margin-right: 5rem;
+}
+
+.navigation__link {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 3.6rem;
+    text-decoration: none;
+    color: #b02db0;
+    outline: none;
+    transition: all .3s ease-in-out;
+}
+.navigation__link:hover,
+.navigation__link:focus {
+    color: #713c71;
+}
+
+.header__phone {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.4rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+} 
+.header__phone--link {
+    text-decoration: none;
+    color: #362478;
+    outline: none;
+}
+
+.header__phone--link:before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f879";
+    font-size: 2rem;
+}
+
+
+.cart__box {
+    margin-right: 1.6rem;
+    width: 18rem;
+    font-family: 'Kaushan Script', cursive;
+    color: #362478;
+    font-size: 1.6rem;
+    height: 5rem;
+    align-self: center;
+    border: 2px solid #362478;
+    border-radius: 8px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    
+}
+
+.cart__box:hover {
+    background-color: #b02db0;
+    color: white;
+    border: none;
+}
+
+.cart__text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart__text i {
+    margin-top: 3px;
+}
+
+
+
+.hero {
+    padding-top: 30rem;
+    background-color: green;
+    
+}
+
+.about-us {
+    background-color: violet;
+}
+
+.store {
+    background-color:dodgerblue;
+}
+.footer {
+    font-size: 1rem;
+}
+
+p{
+    margin-bottom: 0px;
+    font-size: 1.5rem;
+}
+
+button{
+    font-size: 1.5rem !important;
+}
+h5{
+    font-size: 3rem;
+}
+
+.text-1-5rem{
+    font-size: 1.5rem;
+}
+
+/* Turns off the up / down arrows next to the number inputs in Chrome, Safari, Edge, and Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Turns off the up / down arrows next to the number inputs in Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.max-width-100{
+    max-width: 100%; 
+    height: auto; 
+}
+
+.border-radius-100{
+    border-radius: 100px;
+}
+
+.square-cropped-100px{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.width-90{
+  width: 90%;
+}
+
+.width-20{
+    width: 20%; 
+}
+
+.width-27{
+    width: 27%;
+}
+
+.width-107px{
+    width: 107px;
+}
+
+.px-1rem{
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.pl-15px{
+    padding-left: 15px;
+}
+
+.my-7-5px{
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+}
+
+
