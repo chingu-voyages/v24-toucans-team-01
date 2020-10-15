@@ -80,4 +80,4 @@ const productList = [
   },
 ];
 
-export {productList, displayProducts, productToHtmlElement};
+export { productList, displayProducts, productToHtmlElement };

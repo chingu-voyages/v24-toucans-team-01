@@ -1,4 +1,3 @@
-
 function filterToggleHandler(e) {
   e.stopPropagation();
   let toggleButtons = document.querySelector('.product-categories');
@@ -8,6 +7,6 @@ function filterToggleHandler(e) {
     toggleButtons.className = 'product-categories';
   }
 }
-export default function filterToggle(){
- return document.querySelector('.product-category i').addEventListener('click', filterToggleHandler);
+export default function filterToggle() {
+  return document.querySelector('.product-category i').addEventListener('click', filterToggleHandler);
 }

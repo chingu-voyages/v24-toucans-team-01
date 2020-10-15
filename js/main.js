@@ -1,5 +1,5 @@
 import { productList, displayProducts } from './product-list.js';
-import filterToggle from './filterToggle.js';//Toggling to a dropdown menu when px
+import filterToggle from './filterToggle.js'; //Toggling to a dropdown menu when px
 
 filterToggle();
 displayProducts(productList);
