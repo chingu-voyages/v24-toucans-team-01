@@ -5,7 +5,7 @@
   "main": "js/main.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --public-url ./",
     "test": "jest"
   },
   "repository": {
