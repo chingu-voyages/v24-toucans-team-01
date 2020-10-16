@@ -140,4 +140,77 @@ section {
     font-size: 1rem;
 }
 
+p{
+    margin-bottom: 0px;
+    font-size: 1.5rem;
+}
+
+button{
+    font-size: 1.5rem !important;
+}
+h5{
+    font-size: 3rem;
+}
+
+.text-1-5rem{
+    font-size: 1.5rem;
+}
+
+/* Turns off the up / down arrows next to the number inputs in Chrome, Safari, Edge, and Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Turns off the up / down arrows next to the number inputs in Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.max-width-100{
+    max-width: 100%; 
+    height: auto; 
+}
+
+.border-radius-100{
+    border-radius: 100px;
+}
+
+.square-cropped-100px{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.width-90{
+  width: 90%;
+}
+
+.width-20{
+    width: 20%; 
+}
+
+.width-27{
+    width: 27%;
+}
+
+.width-107px{
+    width: 107px;
+}
+
+.px-1rem{
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.pl-15px{
+    padding-left: 15px;
+}
+
+.my-7-5px{
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+}
+
 
