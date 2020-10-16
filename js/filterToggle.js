@@ -1,5 +1,6 @@
 function filterToggleHandler(e) {
   e.stopPropagation();
+  e.preventDefault();
   let toggleButtons = document.querySelector('.product-categories');
   if (toggleButtons.className === 'product-categories') {
     toggleButtons.className += ' responsive';

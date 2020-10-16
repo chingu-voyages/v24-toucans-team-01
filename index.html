@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
-    <link rel="stylesheet" href="/styles/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="styles/css/style.css" />
 
     <!--Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
@@ -18,7 +22,7 @@
     <header class="header">
       <div class="header__logo">
         <a href="#" class="logo__link">
-          <img src="/assets/img/logo.png" alt="Logo" class="logo__img" />
+          <img src="assets/img/logo.png" alt="Logo" class="logo__img" />
         </a>
       </div>
       <nav class="navigation">
@@ -30,14 +34,14 @@
             <a href="#" class="navigation__link">About Us</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Store</a>
+            <a href="#store" class="navigation__link">Store</a>
           </li>
         </ul>
       </nav>
       <div class="header__phone">
         <a href="#" class="header__phone--link">+123456789</a>
       </div>
-      <div class="cart__box">
+      <div class="cart__box" data-toggle="modal" data-target="#shoppingCartPopUp">
         <div class="cart__text">
           <i class="fas fa-shopping-cart"></i> <span class="cart__items-number">2 items</span>-<span class="cart__items-text">$10.49</span>
         </div>
@@ -45,7 +49,7 @@
     </header>
     <section class="hero">Hero section</section>
     <section class="about-us">About us section</section>
-    <section class="store">
+    <section class="store" id="store">
       <h1>Our Store</h1>
       <div class="product-categories">
         <button class="product-category">All<i class="fas fa-caret-down"></i></button>
@@ -67,6 +71,96 @@
       <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
     </footer>
 
+    <!-- Shopping cart pop up -->
+
+    <div class="modal fade" id="shoppingCartPopUp" tabindex="-1" aria-labelledby="shoppingCartPopUpLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title pl-15px" id="shoppingCartPopUpLabel">Shopping cart</h5>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="products list" class="p-4 pt-0">
+              <div class="row px-1rem">
+                <div class="col-sm-3 pl-0">
+                  <div class="d-flex justify-content-center">
+                    <img class="square-cropped-100px border-radius-100" src="assets/img/6-cake.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="col-sm-5 d-flex flex-column pr-0">
+                  <div class="my-auto">
+                    <p>Sixth birthday cake</p>
+                    <p>$6.99</p>
+                  </div>
+                </div>
+                <div class="col-sm-3 d-flex align-items-center justify-content-between pl-0">
+                  <div class="input-group width-90">
+                    <button class="btn btn-outline-secondary btn-sm text-1-5rem">-</button>
+                    <input type="number" class="form-control input-number d-inline-block px-1 text-center text-1-5rem" name="qty" value="1" placeholder="1" />
+                    <button class="btn btn-outline-secondary btn-sm text-1-5rem">+</button>
+                  </div>
+                </div>
+                <div class="col-sm-1 d-flex align-items-center p-0">
+                  <i class="fa fa-trash"></i>
+                </div>
+              </div>
+
+              <div class="row px-1rem border-bottom">
+                <div class="col-sm-3 pl-0">
+                  <div class="d-flex justify-content-center">
+                    <img class="square-cropped-100px border-radius-100" src="assets/img/rainbow-cake.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="col-sm-5 d-flex flex-column">
+                  <div class="my-auto">
+                    <p>Rainbow cake</p>
+                    <p>$11.99</p>
+                  </div>
+                </div>
+                <div class="col-sm-3 d-flex align-items-center justify-content-between pl-0">
+                  <div class="input-group width-90">
+                    <button class="btn btn-outline-secondary btn-sm text-1-5rem">-</button>
+                    <input type="number" class="form-control input-number d-inline-block px-1 text-center text-1-5rem" name="qty" value="1" placeholder="1" />
+                    <button class="btn btn-outline-secondary btn-sm text-1-5rem">+</button>
+                  </div>
+                </div>
+                <div class="col-sm-1 d-flex align-items-center p-0">
+                  <i class="fa fa-trash"></i>
+                </div>
+              </div>
+            </div>
+
+            <div id="totalSection" class="p-4 pt-0">
+              <div class="row px-1 py-0">
+                <div class="col-sm-3 pl-0 d-flex align-items-center justify-content-center">
+                  <p><strong>Total</strong></p>
+                </div>
+                <div class="col-sm-5 d-flex align-items-center">
+                  <p><strong>$18.98</strong></p>
+                </div>
+                <button type="button" class="btn btn-primary col-sm-4 width-27">Checkout</button>
+              </div>
+            </div>
+
+            <div class="modal-footer d-flex justify-content-start my-7-5px">
+              <button type="button" class="btn btn-secondary btn-sm justify-it width-20" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Bootstrap scripts-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"
+      integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -30,6 +30,7 @@ section {
   position: fixed;
   top: 0;
   z-index: 1;
+  /*to prevent other contents from going over the header section when scrolling*/
 }
 
 .logo__img {
@@ -125,7 +126,6 @@ section {
 }
 
 .store {
-  background-color: dodgerblue;
   background-color: white;
   text-align: center;
   margin: auto;
@@ -193,7 +193,7 @@ section {
     border-radius: 50%;
   }
 
-  .product-category i:hover, 
+  .product-category i:hover,
   .product-category i:active {
     color: #362478;
     background-color: rgba(255, 255, 255, 0.486);
@@ -234,7 +234,7 @@ section {
   border: 2px solid #362478;
 }
 
-.product-search-box > input {
+.product-search-box>input {
   position: absolute;
   border-style: none;
   width: 90%;
@@ -255,8 +255,8 @@ section {
   cursor: pointer;
 }
 
-.product-search-box > input:focus,
-.product-search-box > button:focus {
+.product-search-box>input:focus,
+.product-search-box>button:focus {
   outline: none;
 }
 
@@ -292,6 +292,7 @@ section {
 .product-card-image {
   width: 300px;
   height: 300px;
+  cursor: pointer;
 }
 
 .product-card-body {
@@ -303,24 +304,21 @@ section {
   justify-content: space-around;
 }
 
-.product-card-body > h5 {
+.product-card-body>h5 {
   font-size: 2.5rem;
+  position: relative;
+  color: #362478;
+  text-shadow: 0 0 5px white;
 }
 
 .product-card-name {
-  position: relative;
-  text-align: left;
   max-width: 20rem;
-  color: #362478;
-  text-shadow: 0 0 5px white;
+  text-align: left;
 }
 
 .product-card-price {
-  position: relative;
-  text-align: right;
   max-width: 10rem;
-  color: #362478;
-  text-shadow: 0 0 5px white;
+  text-align: right;
 }
 
 .product-card-footer {
@@ -349,6 +347,111 @@ section {
   border: none;
 }
 
+.product-desc-close {
+  font-size: 1rem
+}
+
+.product-desc-header {
+  border-bottom: 0 none;
+}
+
+.product-desc-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  color: #362478;
+}
+
+.product-desc-content p {
+  font-size: 1rem;
+}
+
+.product-desc h5 {
+  font-size: 2.5rem;
+}
+
+.product-desc h6 {
+  font-size: 2.0rem;
+}
+.product-desc .add-to-cart {
+  margin-right:10px;
+}
 .footer {
   font-size: 1rem;
+}
+
+/*Shopping Cart*/
+#shoppingCartPopUp p {
+  margin-bottom: 0px;
+  font-size: 1.5rem;
+}
+
+#shoppingCartPopUp button {
+  font-size: 1.5rem !important;
+}
+
+#shoppingCartPopUp h5 {
+  font-size: 3rem;
+}
+
+.text-1-5rem {
+  font-size: 1.5rem;
+}
+
+/* Turns off the up / down arrows next to the number inputs in Chrome, Safari, Edge, and Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Turns off the up / down arrows next to the number inputs in Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.max-width-100 {
+  max-width: 100%;
+  height: auto;
+}
+
+.border-radius-100 {
+  border-radius: 100px;
+}
+
+.square-cropped-100px {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.width-90 {
+  width: 90%;
+}
+
+.width-20 {
+  width: 20%;
+}
+
+.width-27 {
+  width: 27%;
+}
+
+.width-107px {
+  width: 107px;
+}
+
+.px-1rem {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.pl-15px {
+  padding-left: 15px;
+}
+
+.my-7-5px {
+  margin-left: 7.5px;
+  margin-right: 7.5px;
 }
