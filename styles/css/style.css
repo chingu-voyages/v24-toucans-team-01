@@ -348,7 +348,7 @@ section {
 }
 
 .product-desc-close {
-  font-size: 1rem
+  font-size: 1rem;
 }
 
 .product-desc-header {
@@ -372,11 +372,13 @@ section {
 }
 
 .product-desc h6 {
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
+
 .product-desc .add-to-cart {
-  margin-right:10px;
+  margin-right: 10px;
 }
+
 .footer {
   font-size: 1rem;
 }
