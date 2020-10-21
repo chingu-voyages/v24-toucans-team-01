@@ -33,6 +33,12 @@ section {
   /*to prevent other contents from going over the header section when scrolling*/
 }
 
+body.modal-open {
+  width: 100% !important;
+  padding-right: 0 !important;
+  overflow-y: scroll !important;
+}
+
 .logo__img {
   width: 5rem;
   margin-top: 1.2rem;
@@ -375,8 +381,50 @@ section {
   font-size: 2rem;
 }
 
-.product-desc .add-to-cart {
-  margin-right: 10px;
+.product-desc-input-width {
+  width: 10rem;
+}
+
+.price-qty {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.product-carousel-arrow-left {
+  position: absolute;
+  z-index:1;
+  top: 45%;
+  left:-30px;
+  border: none;
+  background-color: transparent;
+  color:white;
+}
+.product-carousel-arrow-right {
+  position: absolute;
+  z-index:1;
+  top: 45%;
+  right:-30px;
+  border: none;
+  background-color: transparent;
+  color:white;
+}
+@media screen and (max-width: 710px) {
+.product-carousel-arrow-left {
+  z-index: 1;
+  top: -15px;
+  left:35%;
+  border: none;
+  background-color: transparent;
+  color: gray;
+}
+.product-carousel-arrow-right {
+  z-index: 10;
+  top: -15px;
+  right:35%;
+  border: none;
+  background-color: transparent;
+  color: gray;
+}
 }
 
 .footer {

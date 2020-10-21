@@ -65,6 +65,40 @@
         </div>
       </form>
       <div class="product-cards"></div>
+      <!-- The Product Modal -->
+      <div class="modal product-desc fade" id="product-modal" data-arrayindex="" data-category="" data-id="">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <button class="product-carousel-arrow-left"><i class="fas fa-angle-left"></i></button>
+            <button class="product-carousel-arrow-right"><i class="fas fa-angle-right"></i></button>
+            <div class="modal-header product-desc-header">
+              <button type="button" class="btn-close product-desc-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row">
+              <div class="col-lg-6">
+                <img class="img-fluid" />
+              </div>
+              <div class="col-lg-6 product-desc-content">
+                <h5 class="pt-0"></h5>
+                <p class="p-2"></p>
+                <h6 class="p-2">Ingredients</h6>
+                <p class="p-2 pb-lg-5"></p>
+                <div class="price-qty mt-auto">
+                  <h5 class="pt-3"></h5>
+                  <div class="input-group product-desc-input-width">
+                    <button class="btn btn-outline-secondary btn-sm text-1-5rem">-</button>
+                    <input type="number" class="form-control input-number d-inline-block px-1 text-center text-1-5rem" name="qty" value="1" placeholder="1" />
+                    <button class="btn btn-outline-secondary btn-sm text-1-5rem">+</button>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button class="add-to-cart">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <footer class="footer">
       Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from
