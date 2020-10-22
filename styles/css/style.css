@@ -12,14 +12,22 @@ html {
   /* 1rem = 10px; 10px/16px = 62.5% */
 }
 
+/*prevents layout shift on modal window open*/
+body.modal-open {
+  width: 100% !important;
+  padding-right: 0 !important;
+  overflow-y: scroll !important;
+}
+
+.about-us {
+  min-height: 80rem;
+}
 section {
   font-size: 5rem;
-  min-height: 80rem;
   color: white;
 }
 
 .header {
-  background-color: #ffffff;
   min-height: 7.6rem;
   font-size: 5rem;
   display: flex;
@@ -117,12 +125,53 @@ section {
 }
 
 .hero {
-  padding-top: 30rem;
-  background-color: green;
+  margin-top: 8.5rem;
+  max-height: calc(100vh - 8.5rem);
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d4e4ef+0,a2cad8+100&0.56+0,0.75+100 */
+  background: -moz-linear-gradient(45deg, rgba(212, 228, 239, 0.56) 0%, rgba(162, 202, 216, 0.75) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(212, 228, 239, 0.56) 0%, rgba(162, 202, 216, 0.75) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(212, 228, 239, 0.56) 0%, rgba(162, 202, 216, 0.75) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fd4e4ef', endColorstr='#bfa2cad8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.hero__video {
+  /* position: absolute;
+  right: 0;
+  bottom: 0; */
+  z-index: -100;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.hero .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.title__heading {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 9rem;
+  color: #b02db0;
+  white-space: nowrap;
+  margin-bottom: 5rem;
+}
+
+.title__btn {
+  font-family: 'Lato', sans-serif;
+  display: inline-block;
+  color: #362478;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 4px solid #362478;
 }
 
 .about-us {
   background-color: violet;
+  z-index: 10; /* To prevent hero video from overlapping */
 }
 
 .store {
@@ -234,7 +283,7 @@ section {
   border: 2px solid #362478;
 }
 
-.product-search-box>input {
+.product-search-box > input {
   position: absolute;
   border-style: none;
   width: 90%;
@@ -255,8 +304,8 @@ section {
   cursor: pointer;
 }
 
-.product-search-box>input:focus,
-.product-search-box>button:focus {
+.product-search-box > input:focus,
+.product-search-box > button:focus {
   outline: none;
 }
 
@@ -304,7 +353,7 @@ section {
   justify-content: space-around;
 }
 
-.product-card-body>h5 {
+.product-card-body > h5 {
   font-size: 2.5rem;
   position: relative;
   color: #362478;
