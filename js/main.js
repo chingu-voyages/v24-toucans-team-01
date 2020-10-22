@@ -1,4 +1,4 @@
-import ProductArchive, {productList}  from './product-list.js';
+import ProductArchive, { productList } from './product-list.js';
 import filterToggle from './filterToggle.js'; //Toggling to a dropdown menu when px
 
 const DefaultProducts = new ProductArchive(productList);

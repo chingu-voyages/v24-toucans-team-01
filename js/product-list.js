@@ -66,7 +66,6 @@ export default class ProductArchive {
     e.preventDefault();
   }
   modalUpdate(productModal, targetIndex) {
-    
     const targetItem = this.productListArray[targetIndex];
     productModal.dataset.arrayindex = targetIndex;
     productModal.dataset.category = targetItem.category;
