@@ -24,20 +24,23 @@ export default class ProductArchive {
   displayProducts() {
     const productCards = document.querySelector('.product-cards');
     const lastIndex = this.productListArray.length - 1;
-
     const productModal = document.querySelector('.modal.product-desc');
+
     this.productListArray.map((product, index) => {
       const productToElement = this.productToHtmlElement(product, index);
       productCards.append(productToElement);
     });
+
     productModal.querySelector('.product-carousel-arrow-left').addEventListener('click', (e) => {
       this.defaultHander(e);
       this.arrowHandler(productModal, lastIndex, true);
     });
+
     productModal.querySelector('.product-carousel-arrow-right').addEventListener('click', (e) => {
       this.defaultHander(e);
       this.arrowHandler(productModal, lastIndex, false);
     });
+
     productCards.addEventListener('click', (e) => {
       this.defaultHander(e);
       if (e.target.matches('.product-card-image')) {
@@ -49,6 +52,7 @@ export default class ProductArchive {
   arrowHandler(productModal, lastIndex, left) {
     let index = Number(productModal.dataset.arrayindex);
     let itemIndex = 0;
+
     if (left) {
       itemIndex = index > 0 ? index - 1 : lastIndex;
     } else {
@@ -62,6 +66,7 @@ export default class ProductArchive {
     e.preventDefault();
   }
   modalUpdate(productModal, targetIndex) {
+    
     const targetItem = this.productListArray[targetIndex];
     productModal.dataset.arrayindex = targetIndex;
     productModal.dataset.category = targetItem.category;

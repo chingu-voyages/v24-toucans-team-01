@@ -1,8 +1,8 @@
 import ProductArchive, {productList}  from './product-list.js';
 import filterToggle from './filterToggle.js'; //Toggling to a dropdown menu when px
 
-const AllProducts = new ProductArchive(productList);
-AllProducts.displayProducts();
+const DefaultProducts = new ProductArchive(productList);
+DefaultProducts.displayProducts();
 filterToggle();
 //Dummy function! this is just testing whether the add-to-cart button can retrieve the info
 document.querySelector('.product-cards').addEventListener('click', (e) => {
