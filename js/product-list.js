@@ -6,13 +6,15 @@ export default class ProductArchive {
   productToHtmlElement(product, index) {
     const html = `
           <div class="product-card" data-category="${product.category}" data-id="${product.productId}" data-arrayindex="${index}">
-            <img class="product-card-image" src="${product.image}" data-toggle="modal" data-target="#product-modal" />
+            <div class="product-card-image-frame">
+              <img class="product-card-image" src="${product.image}" data-toggle="modal" data-target="#product-modal" />
+            </div>
             <div class="product-card-body">
               <h5 class="product-card-name">${product.productName}</h5>
               <h5 class="product-card-price">${product.price}</h5>
             </div>
             <div class="product-card-footer">
-              <button class="add-to-cart">Add to cart</button>
+              <button class="btn add-to-cart shadow-none">Add to cart</button>
             </div>
           </div>
     `;
@@ -22,7 +24,7 @@ export default class ProductArchive {
   displayProducts() {
     const productCards = document.querySelector('.product-cards');
     const lastIndex = this.productListArray.length - 1;
-    // const productModal = modalToHtmlElement();
+
     const productModal = document.querySelector('.modal.product-desc');
     this.productListArray.map((product, index) => {
       const productToElement = this.productToHtmlElement(product, index);
@@ -36,30 +38,29 @@ export default class ProductArchive {
       this.defaultHander(e);
       this.arrowHandler(productModal, lastIndex, false);
     });
-    productCards.append(productModal);
-    productCards.addEventListener("click", (e) => {
+    productCards.addEventListener('click', (e) => {
       this.defaultHander(e);
       if (e.target.matches('.product-card-image')) {
         this.modalUpdate(productModal, e.target.closest('.product-card').dataset.arrayindex);
-        }
+      }
     });
   }
-  arrowHandler(productModal, lastIndex, left){
+
+  arrowHandler(productModal, lastIndex, left) {
     let index = Number(productModal.dataset.arrayindex);
     let itemIndex = 0;
-    if(left){
+    if (left) {
       itemIndex = index > 0 ? index - 1 : lastIndex;
     } else {
       itemIndex = index < lastIndex ? index + 1 : 0;
     }
     this.modalUpdate(productModal, itemIndex);
-    return index = itemIndex;
+    return (index = itemIndex);
   }
   defaultHander(e) {
     e.stopPropagation();
     e.preventDefault();
   }
-
   modalUpdate(productModal, targetIndex) {
     const targetItem = this.productListArray[targetIndex];
     productModal.dataset.arrayindex = targetIndex;
@@ -72,8 +73,6 @@ export default class ProductArchive {
     productModal.querySelector('.price-qty>h5').innerText = targetItem.price;
   }
 }
-
-
 
 const productList = [
   {
@@ -150,7 +149,7 @@ const productList = [
   },
 ];
 
-export { productList};
+export { productList };
 
 // function productToHtmlElement(product, index) {
 //   const html = `
@@ -217,7 +216,6 @@ export { productList};
 //   productModal.querySelector('.price-qty>h5').innerText = targetItem.price;
 // }
 
-
 // function productToHtmlElement(product) {
 //   const html = `
 //         <div class="product-card" data-category="${product.category}" data-id="${product.productId}">
@@ -231,11 +229,11 @@ export { productList};
 //           </div>
 //         </div>
 //         <!-- The Modal -->
-//         <div class="modal product-desc" id="product${product.productId}" data-category="${product.category}" data-id="${product.productId}">  
+//         <div class="modal product-desc" id="product${product.productId}" data-category="${product.category}" data-id="${product.productId}">
 //             <div class="modal-dialog modal-dialog-centered modal-xl">
 //             <div class="modal-content">
-//             <button class="product-carousel-arrow-left"><i class="fas fa-angle-left"></i></button>  
-//             <button class="product-carousel-arrow-right"><i class="fas fa-angle-right"></i></button>  
+//             <button class="product-carousel-arrow-left"><i class="fas fa-angle-left"></i></button>
+//             <button class="product-carousel-arrow-right"><i class="fas fa-angle-right"></i></button>
 //               <div class="modal-header product-desc-header">
 //                 <button type="button" class="btn-close product-desc-close" data-dismiss="modal" aria-label="Close"></button>
 //               </div>
@@ -248,7 +246,7 @@ export { productList};
 //                   <p class="p-2">${product.description}</p>
 //                   <h6 class="p-2">Ingredients</h6>
 //                   <p class="p-2 pb-lg-5">${product.ingredients}</p>
-//                   <div class="price-qty mt-auto">                  
+//                   <div class="price-qty mt-auto">
 //                     <h5 class="pt-3">${product.price}</h5>
 //                     <div class="input-group product-desc-input-width">
 //                       <button class="btn btn-outline-secondary btn-sm text-1-5rem">-</button>
@@ -256,7 +254,7 @@ export { productList};
 //                       <button class="btn btn-outline-secondary btn-sm text-1-5rem">+</button>
 //                     </div>
 //                   </div>
-//                   <div class="modal-footer">               
+//                   <div class="modal-footer">
 //                     <button class="add-to-cart">Add to cart</button>
 //                   </div>
 //                 </div>
@@ -269,11 +267,11 @@ export { productList};
 // }
 // function modalToHtmlElement(){
 //   const html = `    <!-- The Modal -->
-//         <div class="modal product-desc" id="product-modal" data-arrayindex="">  
+//         <div class="modal product-desc" id="product-modal" data-arrayindex="">
 //             <div class="modal-dialog modal-dialog-centered modal-xl">
 //             <div class="modal-content">
-//             <button class="product-carousel-arrow-left"><i class="fas fa-angle-left"></i></button>  
-//             <button class="product-carousel-arrow-right"><i class="fas fa-angle-right"></i></button>  
+//             <button class="product-carousel-arrow-left"><i class="fas fa-angle-left"></i></button>
+//             <button class="product-carousel-arrow-right"><i class="fas fa-angle-right"></i></button>
 //               <div class="modal-header product-desc-header">
 //                 <button type="button" class="btn-close product-desc-close" data-dismiss="modal" aria-label="Close"></button>
 //               </div>
@@ -286,7 +284,7 @@ export { productList};
 //                   <p class="p-2"></p>
 //                   <h6 class="p-2">Ingredients</h6>
 //                   <p class="p-2 pb-lg-5"></p>
-//                   <div class="price-qty mt-auto">                  
+//                   <div class="price-qty mt-auto">
 //                     <h5 class="pt-3"></h5>
 //                     <div class="input-group product-desc-input-width">
 //                       <button class="btn btn-outline-secondary btn-sm text-1-5rem">-</button>
@@ -294,7 +292,7 @@ export { productList};
 //                       <button class="btn btn-outline-secondary btn-sm text-1-5rem">+</button>
 //                     </div>
 //                   </div>
-//                   <div class="modal-footer">               
+//                   <div class="modal-footer">
 //                     <button class="add-to-cart">Add to cart</button>
 //                   </div>
 //                 </div>
@@ -302,7 +300,7 @@ export { productList};
 //             </div>
 //           </div>
 //         </div>`;
-//    return document.createRange().createContextualFragment(html);     
+//    return document.createRange().createContextualFragment(html);
 // }
 // function displayProducts(productListArray) {
 //   const productCards = document.querySelector('.product-cards');

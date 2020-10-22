@@ -169,7 +169,8 @@ body.modal-open {
   cursor: pointer;
 }
 
-.product-category:hover {
+.product-category:hover,
+.product-category:active {
   background-color: #b02db0;
   color: white;
   border: none;
@@ -187,6 +188,17 @@ body.modal-open {
 }
 
 @media screen and (max-width: 710px) {
+  .product-category-title {
+    font-family: 'Kaushan Script',
+    cursive;
+    color: #362478;
+    margin-top: 5rem;
+    font-size: 1.6rem;
+    align-self: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .product-categories button:not(:first-child) {
     display: none;
   }
@@ -205,9 +217,7 @@ body.modal-open {
     background-color: rgba(255, 255, 255, 0.486);
     border-radius: 50%;
   }
-}
 
-@media screen and (max-width: 710px) {
   .product-categories.responsive {
     position: relative;
   }
@@ -294,14 +304,24 @@ body.modal-open {
   background-color: #3624782f;
   box-shadow: 1px 2px 10px 2px #362478;
 }
-
+.product-card-image-frame{
+  width: 300px;
+  height: 300px;
+  overflow:hidden;
+}
 .product-card-image {
   width: 300px;
   height: 300px;
+  transition: transform .2s;
   cursor: pointer;
 }
 
+.product-card-image:hover{
+  transform: scale(1.2) ;
+}
+
 .product-card-body {
+  z-index:0;
   position: absolute;
   width: 100%;
   bottom: 100px;
@@ -344,6 +364,7 @@ body.modal-open {
   border-radius: 8px;
   padding-left: 1rem;
   padding-right: 1rem;
+  background-color: white;
   cursor: pointer;
 }
 
@@ -390,41 +411,54 @@ body.modal-open {
   justify-content: space-between;
   margin: 1rem 0;
 }
+
 .product-carousel-arrow-left {
   position: absolute;
-  z-index:1;
-  top: 45%;
-  left:-30px;
-  border: none;
-  background-color: transparent;
-  color:white;
-}
-.product-carousel-arrow-right {
-  position: absolute;
-  z-index:1;
-  top: 45%;
-  right:-30px;
-  border: none;
-  background-color: transparent;
-  color:white;
-}
-@media screen and (max-width: 710px) {
-.product-carousel-arrow-left {
   z-index: 1;
-  top: -15px;
-  left:35%;
+  top: 45%;
+  left: -40px;
   border: none;
+  font-size: 6rem;
   background-color: transparent;
-  color: gray;
+  color: white;
 }
+
 .product-carousel-arrow-right {
-  z-index: 10;
-  top: -15px;
-  right:35%;
+  position: absolute;
+  z-index: 1;
+  top: 45%;
+  right: -40px;
   border: none;
+  font-size: 6rem;
   background-color: transparent;
-  color: gray;
+  color: white;
 }
+.product-carousel-arrow-left:hover,
+.product-carousel-arrow-left:active,
+.product-carousel-arrow-right:hover,
+.product-carousel-arrow-right:active {
+  color: #b02db0;
+}
+
+@media screen and (max-width: 710px) {
+  .product-carousel-arrow-left {
+    top: -15px;
+    left: 35%;
+    border: none;
+    font-size: 4rem;
+    background-color: transparent;
+    color: gray;
+  }
+
+  .product-carousel-arrow-right {
+
+    top: -15px;
+    right: 35%;
+    font-size: 4rem;
+    border: none;
+    background-color: transparent;
+    color: gray;
+  }
 }
 
 .footer {
