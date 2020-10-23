@@ -28,6 +28,7 @@ section {
 }
 
 .header {
+  background-color: #ffffff;
   min-height: 7.6rem;
   font-size: 5rem;
   display: flex;
