@@ -33,6 +33,12 @@ section {
   /*to prevent other contents from going over the header section when scrolling*/
 }
 
+body.modal-open {
+  width: 100% !important;
+  padding-right: 0 !important;
+  overflow-y: scroll !important;
+}
+
 .logo__img {
   width: 5rem;
   margin-top: 1.2rem;
@@ -163,7 +169,8 @@ section {
   cursor: pointer;
 }
 
-.product-category:hover {
+.product-category:hover,
+.product-category:active {
   background-color: #b02db0;
   color: white;
   border: none;
@@ -181,6 +188,16 @@ section {
 }
 
 @media screen and (max-width: 710px) {
+  .product-category-title {
+    font-family: 'Kaushan Script', cursive;
+    color: #362478;
+    margin-top: 5rem;
+    font-size: 1.6rem;
+    align-self: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .product-categories button:not(:first-child) {
     display: none;
   }
@@ -199,9 +216,7 @@ section {
     background-color: rgba(255, 255, 255, 0.486);
     border-radius: 50%;
   }
-}
 
-@media screen and (max-width: 710px) {
   .product-categories.responsive {
     position: relative;
   }
@@ -234,7 +249,7 @@ section {
   border: 2px solid #362478;
 }
 
-.product-search-box>input {
+.product-search-box > input {
   position: absolute;
   border-style: none;
   width: 90%;
@@ -255,8 +270,8 @@ section {
   cursor: pointer;
 }
 
-.product-search-box>input:focus,
-.product-search-box>button:focus {
+.product-search-box > input:focus,
+.product-search-box > button:focus {
   outline: none;
 }
 
@@ -288,14 +303,24 @@ section {
   background-color: #3624782f;
   box-shadow: 1px 2px 10px 2px #362478;
 }
-
+.product-card-image-frame {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
 .product-card-image {
   width: 300px;
   height: 300px;
+  transition: transform 0.2s;
   cursor: pointer;
 }
 
+.product-card-image:hover {
+  transform: scale(1.2);
+}
+
 .product-card-body {
+  z-index: 0;
   position: absolute;
   width: 100%;
   bottom: 100px;
@@ -304,7 +329,7 @@ section {
   justify-content: space-around;
 }
 
-.product-card-body>h5 {
+.product-card-body > h5 {
   font-size: 2.5rem;
   position: relative;
   color: #362478;
@@ -338,6 +363,7 @@ section {
   border-radius: 8px;
   padding-left: 1rem;
   padding-right: 1rem;
+  background-color: white;
   cursor: pointer;
 }
 
@@ -364,7 +390,7 @@ section {
 }
 
 .product-desc-content p {
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .product-desc h5 {
@@ -375,8 +401,62 @@ section {
   font-size: 2rem;
 }
 
-.product-desc .add-to-cart {
-  margin-right: 10px;
+.product-desc-input-width {
+  width: 10rem;
+}
+
+.price-qty {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.product-carousel-arrow-left {
+  position: absolute;
+  z-index: 1;
+  top: 45%;
+  left: -40px;
+  border: none;
+  font-size: 6rem;
+  background-color: transparent;
+  color: white;
+}
+
+.product-carousel-arrow-right {
+  position: absolute;
+  z-index: 1;
+  top: 45%;
+  right: -40px;
+  border: none;
+  font-size: 6rem;
+  background-color: transparent;
+  color: white;
+}
+.product-carousel-arrow-left:hover,
+.product-carousel-arrow-left:active,
+.product-carousel-arrow-right:hover,
+.product-carousel-arrow-right:active {
+  color: #b02db0;
+}
+
+@media screen and (max-width: 710px) {
+  .product-carousel-arrow-left {
+    top: -15px;
+    left: 35%;
+    border: none;
+    font-size: 4rem;
+    background-color: transparent;
+    color: gray;
+  }
+
+  .product-carousel-arrow-right {
+    top: -15px;
+    right: 35%;
+    font-size: 4rem;
+    border: none;
+    background-color: transparent;
+    color: gray;
+  }
 }
 
 .footer {
