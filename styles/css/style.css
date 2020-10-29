@@ -132,7 +132,7 @@ body.modal-open {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d4e4ef+0,a2cad8+100&0.56+0,0.75+100 */
   background: -moz-linear-gradient(45deg, rgba(212, 228, 239, 0.56) 0%, rgba(162, 202, 216, 0.75) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(45deg, rgba(212, 228, 239, 0.56) 0%, rgba(162, 202, 216, 0.75) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, rgba(212, 228, 239, 0.56) 0%, rgba(162, 202, 216, 0.75) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background-image: linear-gradient(45deg, rgba(212, 228, 239, 0.56) 0%, rgba(162, 202, 216, 0.75) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fd4e4ef', endColorstr='#bfa2cad8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -158,6 +158,32 @@ body.modal-open {
   margin-bottom: 5rem;
 }
 
+@media (max-width: 992px) {
+  .title__heading {
+    font-size: 7rem;
+  }
+  .hero .wrapper {
+    display: none;
+  }
+
+  .hero {
+    height: calc(100vh - 8.5rem);
+    background-image: linear-gradient(45deg, rgba(212, 228, 239, 0.56) 0%, rgba(162, 202, 216, 0.75) 100%), url(../../assets/img/hero-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 768px) {
+  .title__heading {
+    font-size: 4rem;
+  }
+
+  .hero .title {
+    top: 66%;
+  }
+}
+
 .title__btn {
   font-family: 'Kaushan Script', cursive;
   font-size: 32px;
@@ -167,7 +193,15 @@ body.modal-open {
   padding-left: 20px;
   padding-right: 20px;
   border: 2.5px solid #362478;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .title__btn {
+    font-size: 24px;
+    padding-left: 10px;
+    padding-right: 16px;
+  }
 }
 
 .title__btn:hover {
