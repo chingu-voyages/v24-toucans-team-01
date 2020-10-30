@@ -183,7 +183,11 @@ body.modal-open {
     top: 66%;
   }
 }
-
+@media (max-width: 400px) {
+  .title__heading {
+    white-space: normal;
+  }
+}
 .title__btn {
   font-family: 'Kaushan Script', cursive;
   font-size: 32px;
