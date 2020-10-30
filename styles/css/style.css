@@ -121,12 +121,18 @@ body.modal-open {
 .cart__text i {
   margin-top: 3px;
 }
+
+.humburger {
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
   .header {
     justify-content: center;
     justify-items: center;
   }
   .humburger {
+    display:block;
     position: absolute;
     right: 20px;
     margin-right:0;
@@ -160,7 +166,8 @@ body.modal-open {
     left: 20px;
     margin-right:0;
     bottom: 1.2rem;
-    }
+
+    } 
   .navigation {
     display: none;
   }
@@ -194,8 +201,8 @@ body.modal-open {
   }
   .logo__img {
     position: absolute;
-    bottom: -2.0rem;
-    max-width: 30px;
+    bottom: -2.5rem;
+    left: -0.5rem;
   }
   .navigation.responsive {
     position: absolute;
