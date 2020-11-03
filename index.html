@@ -13,7 +13,8 @@
     <!--Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet" />
+    <!--uncomment this later, google fonts was slowing down my browser so I commented it out (-Joanne)-->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet" /> -->
 
     <title>Cake Store</title>
   </head>
@@ -82,52 +83,12 @@
           </div>
           <div class="modal-body">
             <div id="products list" class="p-4 pt-0">
-              <div class="row px-1rem">
-                <div class="col-sm-3 pl-0">
-                  <div class="d-flex justify-content-center">
-                    <img class="square-cropped-100px border-radius-100" src="assets/img/6-cake.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="col-sm-5 d-flex flex-column pr-0">
-                  <div class="my-auto">
-                    <p>Sixth birthday cake</p>
-                    <p>$6.99</p>
-                  </div>
-                </div>
-                <div class="col-sm-3 d-flex align-items-center justify-content-between pl-0">
-                  <div class="input-group width-90">
-                    <button class="btn btn-outline-secondary btn-sm text-1-5rem">-</button>
-                    <input type="number" class="form-control input-number d-inline-block px-1 text-center text-1-5rem" name="qty" value="1" placeholder="1" />
-                    <button class="btn btn-outline-secondary btn-sm text-1-5rem">+</button>
-                  </div>
-                </div>
-                <div class="col-sm-1 d-flex align-items-center p-0">
-                  <i class="fa fa-trash"></i>
-                </div>
+              <div class="product-container">
+                <!-- Product pictures, names and prices will be dynamically generated -->
               </div>
 
-              <div class="row px-1rem border-bottom">
-                <div class="col-sm-3 pl-0">
-                  <div class="d-flex justify-content-center">
-                    <img class="square-cropped-100px border-radius-100" src="assets/img/rainbow-cake.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="col-sm-5 d-flex flex-column">
-                  <div class="my-auto">
-                    <p>Rainbow cake</p>
-                    <p>$11.99</p>
-                  </div>
-                </div>
-                <div class="col-sm-3 d-flex align-items-center justify-content-between pl-0">
-                  <div class="input-group width-90">
-                    <button class="btn btn-outline-secondary btn-sm text-1-5rem">-</button>
-                    <input type="number" class="form-control input-number d-inline-block px-1 text-center text-1-5rem" name="qty" value="1" placeholder="1" />
-                    <button class="btn btn-outline-secondary btn-sm text-1-5rem">+</button>
-                  </div>
-                </div>
-                <div class="col-sm-1 d-flex align-items-center p-0">
-                  <i class="fa fa-trash"></i>
-                </div>
+              <div class="product-container">
+                <!-- Product pictures, names and prices will be dynamically generated -->
               </div>
             </div>
 
@@ -137,7 +98,12 @@
                   <p><strong>Total</strong></p>
                 </div>
                 <div class="col-sm-5 d-flex align-items-center">
-                  <p><strong>$18.98</strong></p>
+                  <strong><p id = "originalTotalDiv">
+                    <!-- Total will be dynamically generated -->
+                  </p></strong>
+                  <strong><p id = "finalTotalDiv" style = "display: none;">
+                    <!-- Total will be dynamically generated -->
+                  </p></strong>
                 </div>
                 <button type="button" class="btn btn-primary col-sm-4 width-27">Checkout</button>
               </div>
@@ -156,11 +122,23 @@
       integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
       crossorigin="anonymous"
     ></script>
-    <script
+
+<!-- Uncomment later: -->
+
+    <!-- <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"
       integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
+
+    <!-- Delete later: -->
+
+    <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"
+  ></script>
+  
+    <!--delete this next line later-->
+    <script src="js/addDecrease.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
