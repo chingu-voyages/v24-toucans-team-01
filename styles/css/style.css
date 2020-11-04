@@ -141,6 +141,7 @@ body.modal-open {
     right: 20px;
     margin-right:0;
     bottom: 3.0rem;
+    cursor: pointer
   }
   .bar1,
   .bar2,
