@@ -21,8 +21,8 @@ section {
 }
 
 .header {
-  background-color: #ffffff;
-  min-height: 7.6rem;
+  background-color: #e5e5fc;
+  min-height: 10rem;
   font-size: 5rem;
   display: flex;
   flex-direction: row;
@@ -126,6 +126,113 @@ body.modal-open {
   margin-top: 3px;
 }
 
+.humburger {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    justify-content: center;
+    justify-items: center;
+  }
+  .humburger {
+    display:block;
+    position: absolute;
+    right: 20px;
+    margin-right:0;
+    bottom: 3.0rem;
+    cursor: pointer
+  }
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #362478;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .change .bar1 {
+    background-color:#b02db0;
+    -webkit-transform: rotate(-45deg) translate(-8px, 8px);
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    background-color:#b02db0;
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  .logo__img {
+    position: absolute;
+    left: 20px;
+    margin-right:0;
+    bottom: 1.2rem;
+
+    } 
+  .navigation {
+    display: none;
+  }
+  .navigation.responsive{
+    position: absolute;
+    display: block;
+    margin: auto;
+    width: 100%;
+    top: 20mm;
+    text-align: center;
+    background-color:#e5e5fc;
+    z-index: -1;
+  }
+  .header__phone {
+    max-width: 160px;
+    margin-right: 25px;
+  }
+  .cart__box {
+    max-width: 160px;
+    margin-left: 25px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
+  .header__logo{
+    position: absolute;
+    max-width: 100px;
+    left: -10px;
+  }
+  .logo__img {
+    position: absolute;
+    bottom: -2.5rem;
+    left: -0.5rem;
+  }
+  .navigation.responsive {
+    position: absolute;
+    width: 100%;
+    top: 20mm;
+    text-align: left;
+  }
+  .navigation.responsive > .navigation__list {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .header__phone {
+    margin: 1rem auto;
+    font-size: 1.6rem;
+  }
+  .cart__box {
+    margin: auto;
+    height: 3rem;
+  }
+  .header__phone--link:before {
+    font-size: 1.6rem;
+  }
+
+}
 .hero {
   margin-top: 8.5rem;
   max-height: calc(100vh - 8.5rem);
@@ -311,7 +418,6 @@ body.modal-open {
   }
 
   .product-categories.responsive button {
-    float: none;
     display: block;
   }
 }
@@ -529,6 +635,9 @@ body.modal-open {
 }
 
 @media screen and (max-width: 710px) {
+  .store > h1 {
+    font-size: 4rem;
+  }
   .product-carousel-arrow-left {
     top: -15px;
     left: 35%;

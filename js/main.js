@@ -1,6 +1,7 @@
 import ProductArchive, { productList } from './product-list.js';
 import filterToggle from './filterToggle.js'; //Toggling to a dropdown menu when px
-
+import navBarDisplay from './nav-bar-responsive';
+navBarDisplay();
 const DefaultProducts = new ProductArchive(productList);
 DefaultProducts.displayProducts();
 filterToggle();
