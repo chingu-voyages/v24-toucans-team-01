@@ -21,8 +21,8 @@ section {
 }
 
 .header {
-  background-color: #ffffff;
-  min-height: 7.6rem;
+  background-color: #e5e5fc;
+  min-height: 10rem;
   font-size: 5rem;
   display: flex;
   flex-direction: row;
@@ -140,7 +140,7 @@ body.modal-open {
     position: absolute;
     right: 20px;
     margin-right:0;
-    bottom: 1.2rem;
+    bottom: 3.0rem;
   }
   .bar1,
   .bar2,
@@ -182,7 +182,7 @@ body.modal-open {
     width: 100%;
     top: 20mm;
     text-align: center;
-    background-color: white;
+    background-color:#e5e5fc;
     z-index: -1;
   }
   .header__phone {
@@ -213,8 +213,6 @@ body.modal-open {
     width: 100%;
     top: 20mm;
     text-align: left;
-    background-color: white;
-    z-index: -1;
   }
   .navigation.responsive > .navigation__list {
     display: flex;
