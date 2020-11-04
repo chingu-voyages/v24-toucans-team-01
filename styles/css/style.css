@@ -12,9 +12,11 @@ html {
   /* 1rem = 10px; 10px/16px = 62.5% */
 }
 
+.about-us {
+  min-height: 80rem;
+}
 section {
   font-size: 5rem;
-  min-height: 80rem;
   color: white;
 }
 
@@ -104,12 +106,14 @@ body.modal-open {
   padding-left: 1rem;
   padding-right: 1rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .cart__box:hover {
   background-color: #b02db0;
   color: white;
   border: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .cart__text {
@@ -123,12 +127,97 @@ body.modal-open {
 }
 
 .hero {
-  padding-top: 30rem;
-  background-color: green;
+  margin-top: 8.5rem;
+  max-height: calc(100vh - 8.5rem);
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d4e4ef+0,a2cad8+100&0.56+0,0.75+100 */
+  background: -moz-linear-gradient(45deg, rgba(212, 228, 239, 0.56) 0%, rgba(162, 202, 216, 0.75) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(212, 228, 239, 0.56) 0%, rgba(162, 202, 216, 0.75) 100%); /* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(45deg, rgba(212, 228, 239, 0.56) 0%, rgba(162, 202, 216, 0.75) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fd4e4ef', endColorstr='#bfa2cad8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.hero__video {
+  z-index: -100;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.hero .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.title__heading {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 9rem;
+  color: #b02db0;
+  white-space: nowrap;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 992px) {
+  .title__heading {
+    font-size: 7rem;
+  }
+  .hero .wrapper {
+    display: none;
+  }
+
+  .hero {
+    height: calc(100vh - 8.5rem);
+    background-image: linear-gradient(45deg, rgba(212, 228, 239, 0.56) 0%, rgba(162, 202, 216, 0.75) 100%), url(../../assets/img/hero-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 768px) {
+  .title__heading {
+    font-size: 4rem;
+  }
+
+  .hero .title {
+    top: 66%;
+  }
+}
+@media (max-width: 400px) {
+  .title__heading {
+    white-space: normal;
+  }
+}
+.title__btn {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 32px;
+  display: inline-block;
+  color: #362478;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2.5px solid #362478;
+  transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .title__btn {
+    font-size: 24px;
+    padding-left: 10px;
+    padding-right: 16px;
+  }
+}
+
+.title__btn:hover {
+  background-color: #b02db0;
+  color: #ffffff;
+  border-color: #b02db0;
+  transition: all 0.3s ease-in-out;
 }
 
 .about-us {
   background-color: violet;
+  z-index: 10; /* To prevent hero video from overlapping */
 }
 
 .store {
