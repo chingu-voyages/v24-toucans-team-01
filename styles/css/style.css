@@ -743,6 +743,10 @@ body.modal-open {
 /* Footer Styles*/
 .footer {
   font-size: 1rem;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
 }
 
 .footer p {
@@ -750,6 +754,11 @@ body.modal-open {
 }
 
 .footer p a {
+  text-decoration: none;
+}
+
+.footer div a {
+  margin: 1rem;
   text-decoration: none;
 }
 
