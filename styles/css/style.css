@@ -308,7 +308,7 @@ body.modal-open {
   margin-bottom: 5rem;
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .title__heading {
     font-size: 7rem;
   }
@@ -323,7 +323,7 @@ body.modal-open {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .title__heading {
     font-size: 4rem;
   }
@@ -332,7 +332,7 @@ body.modal-open {
   }
 }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
   .title__heading {
     white-space: normal;
   }
@@ -351,7 +351,7 @@ body.modal-open {
   transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .btn--medium {
     font-size: 24px;
     padding-left: 10px;
@@ -376,17 +376,27 @@ body.modal-open {
   flex-direction: row;
   justify-content: space-between;
   color: black;
-  font-size: 16px;
   padding-left: 12rem;
   padding-right: 12rem;
   padding-top: 12rem;
 
 }
 
+@media screen and (max-width: 1200px) {
+  .about-us {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+}
+
+
 .about-text {
-  height: 16px;
+  font-size: 16px;
   max-width: 42rem;
 }
+
+
 .about-text__heading {
   font-family: 'Kaushan Script', cursive;
   font-size: 8rem;
@@ -402,17 +412,37 @@ body.modal-open {
   margin-bottom: 5rem;
 } 
 
+@media screen and (max-width: 900px) {
+  .about-us {
+    flex-direction: column;
+    align-items: center; 
+    height: 120rem;
+    justify-content: normal;
+    height: unset;
+    padding-top: 2rem;
+  }
+  .about-text {
+    text-align: center;
+    max-width: unset;
+  }
+
+  .about-text__heading {
+    font-size: 4rem;
+  }
+  
+}
+
 .about-image {
   outline: 5px solid orange;
   position: relative;
   width: 40rem;
   height: 36rem;
 }
+
 .about-image span {
   visibility: hidden;
 }
 .about-image::before {
-  display: inline-block;
   width: 100%;
   height: 100%;
   content: "";
@@ -429,6 +459,29 @@ body.modal-open {
 
 }
 
+@media screen and (max-width: 900px) {
+  .about-image {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-image {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about-image {
+    height: 24rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .about-image:hover::before {
+    transform: none;
+  }
+}
 
 .store {
   background-color: white;
