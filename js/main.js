@@ -1,9 +1,7 @@
-import ProductArchive, { productList } from './product-list.js';
+import { productList, displayProducts } from './product-list.js';
 import filterToggle from './filterToggle.js'; //Toggling to a dropdown menu when px
-import navBarDisplay from './nav-bar-responsive';
-navBarDisplay();
-const DefaultProducts = new ProductArchive(productList);
-DefaultProducts.displayProducts();
+
+displayProducts(productList);
 filterToggle();
 //Dummy function! this is just testing whether the add-to-cart button can retrieve the info
 document.querySelector('.product-cards').addEventListener('click', (e) => {
@@ -17,21 +15,4 @@ document.querySelector('.product-cards').addEventListener('click', (e) => {
       e.target.closest('.product-card').querySelector('.product-card-price').innerText,
     );
   }
-});
-
-/**********************PARALLAX SCROLL EFFECT**************** */
-
-
-const parallax = document.querySelectorAll('.parallax');
-
-window.addEventListener("scroll", function () {
-  let offset = window.pageYOffset;
-  parallax.forEach(function (prllx, i) {
-    if (offset > prllx.offsetTop) {
-      prllx.style.backgroundPositionY = (offset - prllx.offsetTop) * 0.6 + "px"
-    }
-    else {
-      prllx.style.backgroundPositionY = "0px";
-    };
-  });
 });
