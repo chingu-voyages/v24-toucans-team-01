@@ -36,20 +36,14 @@ window.addEventListener("scroll", function () {
   });
 });
 
-/************SMOOTH SCROLL EFFECT**************************** */
+/***************SMOOTH SCROLL EFFECT**************************** */
 
 function smoothScroll(target, duration) {
   console.log(target);
   var target = document.querySelector(target);
 
-  var navbarHeight = 0;
+  var navbarHeight = 100;
 
-  //applying media queries
-  if (window.matchMedia("(max-width: 991px) and (min-width: 768px)").matches) {
-    navbarHeight = 65;
-  } else if (window.matchMedia("(min-width: 992px)").matches) {
-    navbarHeight = 75;
-  }
   var targetPosition = target.getBoundingClientRect().top - navbarHeight;  //vertical distance to the target section minus header height
   var startPosition = window.pageYOffset;
   var startTime = null;
