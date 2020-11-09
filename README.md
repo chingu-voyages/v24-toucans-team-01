@@ -1,6 +1,7 @@
 # v24-toucans-team-01
 Add-project-description-here | Voyage-24 | https://chingu.io/
 
+Deployed site: https://v24-toucans-team-01.netlify.app/
 
 # This project is using the airbnb style guide, please follow the steps bellow for installation
 
