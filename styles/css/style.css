@@ -72,7 +72,7 @@ body.modal-open {
 }
 
 .navigation__link:hover,
-.navigation__link:focus {
+.navigation__link--active {
   color: #713c71;
 }
 
