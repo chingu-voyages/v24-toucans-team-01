@@ -1,6 +1,8 @@
 import ProductArchive, { productList } from './product-list.js';
 import filterToggle from './filterToggle.js'; //Toggling to a dropdown menu when px
 import navBarDisplay from './nav-bar-responsive';
+import scroll from './scroll.js';
+
 navBarDisplay();
 const DefaultProducts = new ProductArchive(productList);
 DefaultProducts.displayProducts();
@@ -19,19 +21,4 @@ document.querySelector('.product-cards').addEventListener('click', (e) => {
   }
 });
 
-/**********************PARALLAX SCROLL EFFECT**************** */
-
-
-const parallax = document.querySelectorAll('.parallax');
-
-window.addEventListener("scroll", function () {
-  let offset = window.pageYOffset;
-  parallax.forEach(function (prllx, i) {
-    if (offset > prllx.offsetTop) {
-      prllx.style.backgroundPositionY = (offset - prllx.offsetTop) * 0.6 + "px"
-    }
-    else {
-      prllx.style.backgroundPositionY = "0px";
-    };
-  });
-});
+scroll();
