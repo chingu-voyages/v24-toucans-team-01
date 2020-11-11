@@ -20,5 +20,20 @@ document.querySelector('.product-cards').addEventListener('click', (e) => {
     );
   }
 });
-
+document.querySelector('#product-modal .add-to-cart').addEventListener('click', (e) => {
+  e.stopPropagation();
+  e.preventDefault();
+  if( document.querySelector('#product-modal').querySelector('.product-desc-input-width > input').value < 1){
+    alert("The quantity cannot be less than one");
+    document.querySelector('#product-modal').querySelector('.product-desc-input-width > input').value = 1;
+  } else {
+    console.log(
+      document.querySelector('#product-modal').dataset.id,
+      document.querySelector('#product-modal').dataset.category,
+      document.querySelector('#product-modal').querySelector('.product-desc-content > h5').innerText,
+      document.querySelector('#product-modal').querySelector('.price-qty > h5').innerText,
+      document.querySelector('#product-modal').querySelector('.product-desc-input-width > input').value,
+    );
+  }
+});
 scroll();

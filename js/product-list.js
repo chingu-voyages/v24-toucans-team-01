@@ -32,23 +32,41 @@ export default class ProductArchive {
     });
 
     productModal.querySelector('.product-carousel-arrow-left').addEventListener('click', (e) => {
-      this.defaultHander(e);
+      this.defaultHandler(e);
       this.arrowHandler(productModal, lastIndex, true);
     });
 
     productModal.querySelector('.product-carousel-arrow-right').addEventListener('click', (e) => {
-      this.defaultHander(e);
+      this.defaultHandler(e);
       this.arrowHandler(productModal, lastIndex, false);
     });
 
     productCards.addEventListener('click', (e) => {
-      this.defaultHander(e);
+      this.defaultHandler(e);
       if (e.target.matches('.product-card-image')) {
         this.modalUpdate(productModal, e.target.closest('.product-card').dataset.arrayindex);
       }
     });
+
+    productModal.querySelector('.product-desc-input-width').addEventListener('click', (e) => {
+      this.defaultHandler(e);
+      this.quantityHandler(productModal, e);
+    });
   }
 
+  quantityHandler(productModal,e) {
+    let quantity = productModal.querySelector('.product-desc-input-width input').value;
+    if (e.target.innerText === '+') {
+      quantity++;
+    }
+    if (e.target.innerText === '-') {
+      quantity--;
+    }
+    if (quantity > 0) {
+      productModal.querySelector('.product-desc-input-width input').value = quantity;
+    }
+  }
+  
   arrowHandler(productModal, lastIndex, left) {
     let index = Number(productModal.dataset.arrayindex);
     let itemIndex = 0;
@@ -61,7 +79,8 @@ export default class ProductArchive {
     this.modalUpdate(productModal, itemIndex);
     return (index = itemIndex);
   }
-  defaultHander(e) {
+
+  defaultHandler(e) {
     e.stopPropagation();
     e.preventDefault();
   }
@@ -75,6 +94,7 @@ export default class ProductArchive {
     productModal.querySelector('.product-desc-content').children[1].innerText = targetItem.description;
     productModal.querySelector('.product-desc-content').children[3].innerText = targetItem.ingredients;
     productModal.querySelector('.price-qty>h5').innerText = targetItem.price;
+    productModal.querySelector('.product-desc-input-width input').value = 1;
   }
 }
 
