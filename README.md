@@ -1,40 +1,52 @@
-# v24-toucans-team-01
-Add-project-description-here | Voyage-24 | https://chingu.io/
+# Cake store
+## Overview
+This app was created for the Chingu Voyage 24. It is a  frontend API-ready section for the imaginary store selling sweets and cookies. 
 
-Deployed site: https://v24-toucans-team-01.netlify.app/
+**LIVE LINK:** [https://v24-toucans-team-01.netlify.app/](https://v24-toucans-team-01.netlify.app/)
 
-# This project is using the airbnb style guide, please follow the steps bellow for installation
+![Cake_store_screenshot](https://user-images.githubusercontent.com/47148325/98958070-f41b4900-2512-11eb-9e41-cd67a4952dda.jpg)
 
 
-# Installation
+## Features
 
-1. Navigate to your app directory where you want to include this style configuration.
-
-   ```bash
-   cd my-app
-   ```
-
-2. Run this command inside your app's root directory. Note: this command executes the `eslint-prettier-config.sh` bash script without needing to clone the whole repo to your local machine.
-
-   ```bash
-   exec 3<&1;bash <&3 <(curl https://raw.githubusercontent.com/paulolramos/eslint-prettier-airbnb-react/master/eslint-prettier-config.sh 2> /dev/null)
-   ```
-
-3. Make selections for your preference of package manager (npm or yarn), file format (.js or .json), max-line size, and trailing commas (none, es5, all).
-
-4. Look in your project's root directory and notice the two newly added/updated config files:
-   - `.eslintrc.js` or `.eslintrc.json`
-   - `.prettierrc.js` or `.prettierrc.json`
-   
-   In case you don't know which config to use download our .eslintrc.json file
-
-# Packages
-
-### Main Packages
-
-1. [ESlint](https://eslint.org/)
+ - Fully responsive mobile layout for the devices with screen widths up  to 240px
+ - Products in the Store section are being  generated dynamically via  JSON objects with possibility to use custom APIs
+ - Add-to-cart function for every product on the page 
+ - Product sorting function for various categories (cakes, sweets, etc...)
+ - Product search function
+ - Cart total product calculation and update if necessary
+ - Various styling effects: background video in the  hero section which changes to static image for lower resolution, parallax scroll & scrollspy 
+ 
+## Tech used / dependencies
+1.  [ESlint](https://eslint.org/)
 2. [Prettier](https://prettier.io/)
+3. [Parcel](https://parceljs.org/)
+4. [Bootstrap v.5](https://v5.getbootstrap.com/) for some additional styling
+5. Fonts from [Google Fonts](https://fonts.google.com/)
+6. Icons made by [Freepik](https://www.freepik.com/) & [Font Awesome](https://fontawesome.com/)
+7. Images from [Unsplash](https://unsplash.com/) & background video from [Coverr](https://coverr.co/)
+8. Gradients inspired by [Colorzilla](https://www.colorzilla.com/gradient-editor/)
 
+## This project is using the airbnb style guide, please follow the steps bellow for installation
+
+### Installation
+
+1.  Navigate to your app directory where you want to include this style configuration.
+    
+    cd my-app
+    
+2.  Run this command inside your app's root directory. Note: this command executes the `eslint-prettier-config.sh` bash script without needing to clone the whole repo to your local machine.
+    
+    exec 3<&1;bash <&3 <(curl https://raw.githubusercontent.com/paulolramos/eslint-prettier-airbnb-react/master/eslint-prettier-config.sh 2> /dev/null)
+    
+3.  Make selections for your preference of package manager (npm or yarn), file format (.js or .json), max-line size, and trailing commas (none, es5, all).
+    
+4.  Look in your project's root directory and notice the two newly added/updated config files:
+    
+    -   `.eslintrc.js` or `.eslintrc.json`
+    -   `.prettierrc.js` or `.prettierrc.json`
+    
+    In case you don't know which config to use download our .eslintrc.json file
 ### Airbnb Configuration
 
 1. [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
@@ -56,7 +68,7 @@ Deployed site: https://v24-toucans-team-01.netlify.app/
 2. [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
    - Turns off all rules that are unnecessary or might conflict with Prettier.
 
-# Created Configuration Files
+### Created Configuration Files
 
 Once files are created, you may edit to your liking.
 
