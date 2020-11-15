@@ -30,8 +30,9 @@ This app was created for the Chingu Voyage 24. It is a  frontend API-ready secti
 ## Running the project locally
 From the repo:
 1. Clone the project locally
-2. Run `npm install` in your bash\command line
-3. Run `npm start` in your bash\command line
+2. `cd` into *front-end* directory
+3. Run `npm install` in your bash\command line
+4. Run `npm start` in your bash\command line
 
 ## This project is using the airbnb style guide, please follow the steps bellow for installation
 
