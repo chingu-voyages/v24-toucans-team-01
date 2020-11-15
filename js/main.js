@@ -35,7 +35,7 @@ fetchAllProducts().then( products =>{
   const array = products.productListArray.filter(product => product.productName.includes(e.target.value));
   NewList = new ProductArchive(array);
   NewList.displayProducts();
-})}).catch(console.log("hello error"));
+})}).catch(e => console.log("hello error",e));
 
 filterToggle();
 //Dummy function! this is just testing whether the add-to-cart button can retrieve the info
