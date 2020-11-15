@@ -34,6 +34,14 @@ From the repo:
 3. Run `npm install` in your bash\command line
 4. Run `npm start` in your bash\command line
 
+## Working with the back-end section
+From the repo:
+1. Clone the project locally
+2. `cd` into *product-API* directory
+3. Run `npm install` in your bash\command line
+4. Change mongoose.connect to localhost
+5. Run `npm start` in your bash\command line
+
 ## This project is using the airbnb style guide, please follow the steps bellow for installation
 
 ### Installation
