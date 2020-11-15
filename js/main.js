@@ -1,11 +1,42 @@
-import ProductArchive, { productList } from './product-list.js';
+import ProductArchive, { fetchAllProducts, fetchProductsByCategory } from './product-list.js';
 import filterToggle from './filterToggle.js'; //Toggling to a dropdown menu when px
 import navBarDisplay from './nav-bar-responsive';
 import scroll from './scroll.js';
 
-navBarDisplay();
-const DefaultProducts = new ProductArchive(productList);
-DefaultProducts.displayProducts();
+navBarDisplay(); 
+
+fetchAllProducts();
+document.querySelector('.product-categories').addEventListener('click', (e) => {
+  e.stopPropagation();
+  e.preventDefault();
+  document.querySelector('.product-search-box input').value = '';
+  if (e.target.matches('button')) {
+    switch (e.target.innerText) {
+      case 'All':
+        return fetchAllProducts('');
+      case 'Cakes':
+        return fetchProductsByCategory('cake');
+      case 'Cupcakes':
+        return fetchProductsByCategory('cupcake');
+      case 'Sweets':
+        return fetchProductsByCategory('sweets');
+      case 'Doughnuts':
+        return fetchProductsByCategory('doughnut');
+      default:
+        return;
+    } 
+  }
+});
+
+let NewList;
+fetchAllProducts().then( products =>{
+  document.querySelector(".product-search-box input").addEventListener("input", function(e){
+  document.querySelector('.product-cards').textContent = '';  
+  const array = products.productListArray.filter(product => product.productName.includes(e.target.value));
+  NewList = new ProductArchive(array);
+  NewList.displayProducts();
+})}).catch(console.log("hello error"));
+
 filterToggle();
 //Dummy function! this is just testing whether the add-to-cart button can retrieve the info
 document.querySelector('.product-cards').addEventListener('click', (e) => {
@@ -37,13 +68,3 @@ document.querySelector('#product-modal .add-to-cart').addEventListener('click', 
   }
 });
 scroll();
-fetch('https://sleepy-inlet-22959.herokuapp.com/products/')
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log('error!');
-  });
