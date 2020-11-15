@@ -25,7 +25,7 @@ app.listen(port, function () {
 });
 
 app.use(function (req, res, next) {
-  const address = port === 3000 ? 'http://localhost:1234' : 'https://v24-toucans-team-01.netlify.app';
+  const address = 'http://localhost:1234' || 'https://v24-toucans-team-01.netlify.app';
   res.setHeader('Access-Control-Allow-Origin', address);
   next();
 });
