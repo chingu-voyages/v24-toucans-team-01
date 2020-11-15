@@ -6,7 +6,8 @@
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" />
+      <!--Bootstrap alpha 2 wasn't loading so upgraded to alpha 3 (-Joanne)-->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
 
     <link rel="stylesheet" href="styles/css/style.css" />
 
@@ -43,7 +44,7 @@
       </div>
       <div class="cart__box" data-toggle="modal" data-target="#shoppingCartPopUp">
         <div class="cart__text">
-          <i class="fas fa-shopping-cart"></i> <span class="cart__items-number">2 items</span>-<span class="cart__items-text">$10.49</span>
+          <i class="fas fa-shopping-cart"></i> <span id = "navBarTotalAmount" class="cart__items-number"></span>-<span id = "navBarTotalPrice" class="cart__items-text">$0.00</span>
         </div>
       </div>
       <div class="humburger">
@@ -113,7 +114,7 @@
                 <p class="p-2 pb-lg-5"></p>
                 <div class="price-qty mt-auto">
                   <h5 class="pt-3"></h5>
-                  <div class="input-group product-desc-input-width">
+                  <!-- <div class="input-group product-desc-input-width">
                     <h6 class="pt-3 pr-3">&times;</h6>
                     <button class="btn btn-outline-secondary btn-sm text-1-5rem">-</button>
                     <input
@@ -125,7 +126,7 @@
                       min="1"
                     />
                     <button class="btn btn-outline-secondary btn-sm text-1-5rem">+</button>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="modal-footer">
                   <button class="btn add-to-cart shadow-none">Add to cart</button>
@@ -163,67 +164,51 @@
 
     <div class="modal fade" id="shoppingCartPopUp" tabindex="-1" aria-labelledby="shoppingCartPopUpLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div id = "shoppingCartContent" class="modal-content">
+
           <div class="modal-header">
             <h5 class="modal-title pl-15px" id="shoppingCartPopUpLabel">Shopping cart</h5>
             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
           </div>
+
           <div class="modal-body">
-            <div id="products list" class="p-4 pt-0">
-              <div class="product-container">
-                <!-- Product pictures, names and prices will be dynamically generated -->
-              </div>
-
-              <div class="product-container">
-                <!-- Product pictures, names and prices will be dynamically generated -->
-              </div>
-            </div>
-
-            <div id="totalSection" class="p-4 pt-0">
-              <div class="row px-1 py-0">
-                <div class="col-sm-3 pl-0 d-flex align-items-center justify-content-center">
-                  <p><strong>Total</strong></p>
-                </div>
-                <div class="col-sm-5 d-flex align-items-center">
-                  <strong
-                    ><p id="originalTotalDiv">
-                      <!-- Total will be dynamically generated -->
-                    </p></strong
-                  >
-                  <strong
-                    ><p id="finalTotalDiv" style="display: none">
-                      <!-- Total will be dynamically generated -->
-                    </p></strong
-                  >
-                </div>
-                <button type="button" id="checkoutButton" class="btn btn-primary col-sm-4 width-27" data-dismiss="modal">Checkout</button>
-              </div>
-            </div>
-
-            <div class="modal-footer d-flex justify-content-start my-7-5px">
-              <button type="button" class="btn btn-secondary btn-sm justify-it width-20" data-dismiss="modal">Close</button>
+            <div id="productsList" class="p-4 pt-0">
+              <!--Products container-->
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+
+          <div class="modal-footer d-flex"> 
+            <div class = "container">
+              <div class="row">
+                  <div class="col-sm-3 p-4 d-flex justify-content-center">
+                    <strong>
+                      <p id = "totalText">Total</p>
+                    </strong>
+                  </div>                   
+                <div class="col-sm-4 d-flex align-items-center pr-0">
+                      <p id="finalTotalDiv">
+                        <!-- Total will be dynamically generated -->
+                      </p>
+                </div>
+
+                <div class="col-sm-5 d-flex align-items-center justify-content-center pl-0">
+                    <button type="button" id="checkoutButton" class="btn btn-primary width-80" data-dismiss="modal">Checkout</button>
+                </div>
+
+              </div> <!--row-->
+            </div> <!--container-->
+  
+          </div> <!--modal footer-->
+        </div> <!--modal content-->
+      </div> <!--modal dialog-->
+    </div> <!--modal-->
 
     <!--End of shopping cart-->
 
     <!--Bootstrap scripts-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"
-      integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d"
-      crossorigin="anonymous"
-    ></script>
+    <!--Bootstrap alpha 2 wasn't loading so upgraded to alpha 3 (-Joanne)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 
-    <script src="js/shoppingCart.js"></script>
-    <!--I put this here for now because I wasn't sure how to integrate it into main.js (Joanne)-->
   </body>
 </html>
