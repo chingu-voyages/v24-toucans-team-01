@@ -25,8 +25,11 @@ app.listen(port, function () {
 });
 
 app.use(function (req, res, next) {
-  const address = 'http://localhost:1234' || 'https://v24-toucans-team-01.netlify.app';
-  res.setHeader('Access-Control-Allow-Origin', address);
+  const allowedOrigins = [ "http://localhost:1234", "https://v24-toucans-team-01.netlify.app"];
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
   next();
 });
 
