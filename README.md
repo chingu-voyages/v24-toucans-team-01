@@ -10,10 +10,10 @@ This app was created for the Chingu Voyage 24. It is a  frontend API-ready secti
 ## Features
 
  - Fully responsive mobile layout for the devices with screen widths up  to 240px
- - Products in the Store section are being  generated dynamically via  JSON objects with possibility to use custom APIs
+ - Products in the Store section are being  generated dynamically using a custom API (node.js and mongoDBAtlas)
  - Add-to-cart function for every product on the page 
  - Product sorting function for various categories (cakes, sweets, etc...)
- - Product case sensitive search function
+ - Product search function
  - Cart total product calculation and update if necessary
  - Various styling effects: background video in the  hero section which changes to static image for lower resolution, parallax scroll & scrollspy 
  
@@ -38,9 +38,10 @@ From the repo:
 From the repo:
 1. Clone the project locally
 2. `cd` into *product-API* directory
-3. Run `npm install` in your bash\command line
-4. Change mongoose.connect to localhost
-5. Run `npm start` in your bash\command line
+3. set up a mongoDB database and store the data from products.json
+4. Run `npm install` in your bash\command line
+5. Change mongoose.connect to localhost
+6. Run `npm start` in your bash\command line
 
 ## This project is using the airbnb style guide, please follow the steps bellow for installation
 
