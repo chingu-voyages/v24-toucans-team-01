@@ -26,6 +26,14 @@ export default class ProductArchive {
     const lastIndex = this.productListArray.length - 1;
     const productModal = document.querySelector('.modal.product-desc');
 
+    let old_arrowleft = productModal.querySelector('.product-carousel-arrow-right');
+    let new_arrowleft = old_arrowleft.cloneNode(true);
+    old_arrowleft.parentNode.replaceChild(new_arrowleft, old_arrowleft);
+    
+    let old_arrowright = productModal.querySelector('.product-carousel-arrow-right');
+    let new_arrowright = old_arrowright.cloneNode(true);
+    old_arrowright.parentNode.replaceChild(new_arrowright, old_arrowright);
+
     this.productListArray.map((product, index) => {
       const productToElement = this.productToHtmlElement(product, index);
       productCards.append(productToElement);
@@ -98,79 +106,139 @@ export default class ProductArchive {
   }
 }
 
-const productList = [
-  {
-    productId: 1,
-    productName: 'Fancy Chocolate Cake',
-    price: '$10.44',
-    image: 'https://images.unsplash.com/photo-1586985289906-406988974504?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-    category: 'cake',
-    description: `Chocolate cake Quas aliquando ei per, vix libris adolescens an. Eu vis porro assum necessitatibus, ius dicant intellegam delicatissimi ex, tempor convenire accusamus eu nec. Atqui essent eam ei, tamquam sententiae his an. Pri ei erroribus expetendis, no cum vidisse ocurreret patrioque, tale vidit luptatum per eu. Mei ut natum regione atomorum, erant dolorem ad has. Quo at aeterno ullamcorper, ne discere iracundia laboramus vix, eum cu legere deseruisse. Et qui probo tamquam, pro et perfecto dissentiet, ut moderatius delicatissimi vis..`,
-    ingredients: `Chocolate cake Graeco pericula iracundia ea mea. Ex nec feugiat lucilius. Ne qui reque nominati referrentur. Accusata accusamus mea ea, periculis disputationi sea an.`,
-  },
-  {
-    productId: 2,
-    productName: 'Bon Bon Chocolate',
-    price: '$6.99',
-    image: 'https://images.unsplash.com/photo-1583312228158-4001fca6e316?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80',
-    category: 'sweets',
-    description: `Bon Bon Chocolate Ea aperiri platonem vis, in exerci nusquam indoctum nam. Regione gubergren mnesarchum at sit, tacimates indoctum constituam cu eos. Constituam concludaturque his id. Habemus singulis contentiones at vis, pro delenit platonem ad, mea nobis facilisi signiferumque ei. Ei usu quodsi vivendum facilisi, cu menandri patrioque mel, at facer corrumpit mea. Ullum aeque id duo, an nam dolore mnesarchum.`,
-    ingredients: `Bon Bon Chocolate Ex vim nibh gubergren. Ei omnium assueverit mel. Eos et natum doctus appareat, an consul utroque reprimique vix, ne mea clita tamquam. Doctus pertinacia theophrastus eum an, eu eum phaedrum accusata.`,
-  },
-  {
-    productId: 3,
-    productName: 'Unicorn Cupcake',
-    price: '$3.22',
-    image: 'https://images.unsplash.com/photo-1566864399117-22c449669089?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80',
-    category: 'cupcake',
-    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-    ingredients: `Cupcake ipsum dolor sit. Amet carrot cake apple pie. Pie croissant gingerbread carrot cake dragée.`,
-  },
-  {
-    productId: 4,
-    productName: 'High-end Doughnut',
-    price: '$10.44',
-    image: 'https://images.unsplash.com/photo-1554886729-1a57f2750570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80',
-    category: 'doughnut',
-    description: `Doughnut Porro euismod facilis ad est, ipsum dicunt singulis vis ad, quaestio democritum vituperatoribus sea ex. Possit blandit eos cu, mutat iuvaret mei at. No harum aliquip detracto vel, ei vulputate scribentur vix, eum et dico appetere sadipscing. Ex vel laudem graeci. Mei ea dicant offendit vivendum, est veniam aliquid consequuntur et.`,
-    ingredients: `Doughnut Eam omnis ipsum denique no, sint eripuit et nam. Mel in consulatu gloriatur, soluta atomorum voluptatibus no vix, ipsum vocibus neglegentur est in. Ad congue civibus similique sed, ei tantas scripserit vix. `,
-  },
-  {
-    productId: 5,
-    productName: 'Fancy Chocolate Cake',
-    price: '$10.44',
-    image: 'https://images.unsplash.com/photo-1586985289906-406988974504?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-    category: 'cake',
-    description: `Chocolate cake Quas aliquando ei per, vix libris adolescens an. Eu vis porro assum necessitatibus, ius dicant intellegam delicatissimi ex, tempor convenire accusamus eu nec. Atqui essent eam ei, tamquam sententiae his an. Pri ei erroribus expetendis, no cum vidisse ocurreret patrioque, tale vidit luptatum per eu. Mei ut natum regione atomorum, erant dolorem ad has. Quo at aeterno ullamcorper, ne discere iracundia laboramus vix, eum cu legere deseruisse. Et qui probo tamquam, pro et perfecto dissentiet, ut moderatius delicatissimi vis.`,
-    ingredients: `Chocolate cakeChocolate cake Graeco pericula iracundia ea mea. Ex nec feugiat lucilius. Ne qui reque nominati referrentur. Accusata accusamus mea ea, periculis disputationi sea an.`,
-  },
-  {
-    productId: 6,
-    productName: 'Bon Bon Chocolate',
-    price: '$6.99',
-    image: 'https://images.unsplash.com/photo-1583312228158-4001fca6e316?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80',
-    category: 'sweets',
-    description: `Bon Bon Chocolate Ea aperiri platonem vis, in exerci nusquam indoctum nam. Regione gubergren mnesarchum at sit, tacimates indoctum constituam cu eos. Constituam concludaturque his id. Habemus singulis contentiones at vis, pro delenit platonem ad, mea nobis facilisi signiferumque ei. Ei usu quodsi vivendum facilisi, cu menandri patrioque mel, at facer corrumpit mea. Ullum aeque id duo, an nam dolore mnesarchum.`,
-    ingredients: `Bon Bon Chocolate Ex vim nibh gubergren. Ei omnium assueverit mel. Eos et natum doctus appareat, an consul utroque reprimique vix, ne mea clita tamquam. Doctus pertinacia theophrastus eum an, eu eum phaedrum accusata.`,
-  },
-  {
-    productId: 7,
-    productName: 'Unicorn Cupcake',
-    price: '$3.22',
-    image: 'https://images.unsplash.com/photo-1566864399117-22c449669089?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80',
-    category: 'cupcake',
-    description: `Cupcake Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-    ingredients: `Cupcake ipsum dolor sit. Amet carrot cake apple pie. Pie croissant gingerbread carrot cake dragée.`,
-  },
-  {
-    productId: 8,
-    productName: 'High-end Doughnut',
-    price: '$10.44',
-    image: 'https://images.unsplash.com/photo-1554886729-1a57f2750570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80',
-    category: 'doughnut',
-    description: `Doughnut Porro euismod facilis ad est, ipsum dicunt singulis vis ad, quaestio democritum vituperatoribus sea ex. Possit blandit eos cu, mutat iuvaret mei at. No harum aliquip detracto vel, ei vulputate scribentur vix, eum et dico appetere sadipscing. Ex vel laudem graeci. Mei ea dicant offendit vivendum, est veniam aliquid consequuntur et.`,
-    ingredients: `Doughnut Eam omnis ipsum denique no, sint eripuit et nam. Mel in consulatu gloriatur, soluta atomorum voluptatibus no vix, ipsum vocibus neglegentur est in. Ad congue civibus similique sed, ei tantas scripserit vix. `,
-  },
-];
+export async function fetchAllProducts() {
+  let array = [];
+  let DefaultProducts;
+  document.querySelector('.product-cards').textContent='';
+  try {
+  const response = await fetch('http://localhost:3000/products')
+  const data = await response.json();
+  
+  data.forEach((item) => {
+    let product = {
+      productId: item.productId,
+      productName: item.productName,
+      price: item.price,
+      image: item.image,
+      category: item.category,
+      description: item.description,
+      ingredients: item.ingredients,
+    };
+    array.push(product);
+  });
+   DefaultProducts= new ProductArchive(array);
+  
+  } catch(e){
+    console.log("error");
+  }
+  DefaultProducts.displayProducts();
+  return DefaultProducts;
+}
 
-export { productList };
+export async function fetchProductsByCategory(category) {
+  let array = [];
+  let DefaultProducts;
+  document.querySelector('.product-cards').textContent = '';
+  document.querySelector('.product-search-box input').value='';
+  try {
+    const response = await fetch(`http://localhost:3000/products/category/${category}`);
+    const data = await response.json();
+
+    data.forEach((item) => {
+      let product = {
+        productId: item.productId,
+        productName: item.productName,
+        price: item.price,
+        image: item.image,
+        category: item.category,
+        description: item.description,
+        ingredients: item.ingredients,
+      };
+      array.push(product);
+    });
+    DefaultProducts = new ProductArchive(array);
+  } catch (e) {
+    console.log('error');
+  }
+  DefaultProducts.displayProducts();
+  return DefaultProducts; 
+}
+
+//const productList = fetchProduct();
+
+// const productList = [
+//   {
+//     productId: 1,
+//     productName: 'Fancy Chocolate Cake',
+//     price: '$10.44',
+//     image: 'https://images.unsplash.com/photo-1586985289906-406988974504?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+//     category: 'cake',
+//     description: `Chocolate cake Quas aliquando ei per, vix libris adolescens an. Eu vis porro assum necessitatibus, ius dicant intellegam delicatissimi ex, tempor convenire accusamus eu nec. Atqui essent eam ei, tamquam sententiae his an. Pri ei erroribus expetendis, no cum vidisse ocurreret patrioque, tale vidit luptatum per eu. Mei ut natum regione atomorum, erant dolorem ad has. Quo at aeterno ullamcorper, ne discere iracundia laboramus vix, eum cu legere deseruisse. Et qui probo tamquam, pro et perfecto dissentiet, ut moderatius delicatissimi vis..`,
+//     ingredients: `Chocolate cake Graeco pericula iracundia ea mea. Ex nec feugiat lucilius. Ne qui reque nominati referrentur. Accusata accusamus mea ea, periculis disputationi sea an.`,
+//   },
+//   {
+//     productId: 2,
+//     productName: 'Bon Bon Chocolate',
+//     price: '$6.99',
+//     image: 'https://images.unsplash.com/photo-1583312228158-4001fca6e316?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80',
+//     category: 'sweets',
+//     description: `Bon Bon Chocolate Ea aperiri platonem vis, in exerci nusquam indoctum nam. Regione gubergren mnesarchum at sit, tacimates indoctum constituam cu eos. Constituam concludaturque his id. Habemus singulis contentiones at vis, pro delenit platonem ad, mea nobis facilisi signiferumque ei. Ei usu quodsi vivendum facilisi, cu menandri patrioque mel, at facer corrumpit mea. Ullum aeque id duo, an nam dolore mnesarchum.`,
+//     ingredients: `Bon Bon Chocolate Ex vim nibh gubergren. Ei omnium assueverit mel. Eos et natum doctus appareat, an consul utroque reprimique vix, ne mea clita tamquam. Doctus pertinacia theophrastus eum an, eu eum phaedrum accusata.`,
+//   },
+//   {
+//     productId: 3,
+//     productName: 'Unicorn Cupcake',
+//     price: '$3.22',
+//     image: 'https://images.unsplash.com/photo-1566864399117-22c449669089?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80',
+//     category: 'cupcake',
+//     description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+//     ingredients: `Cupcake ipsum dolor sit. Amet carrot cake apple pie. Pie croissant gingerbread carrot cake dragée.`,
+//   },
+//   {
+//     productId: 4,
+//     productName: 'High-end Doughnut',
+//     price: '$10.44',
+//     image: 'https://images.unsplash.com/photo-1554886729-1a57f2750570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80',
+//     category: 'doughnut',
+//     description: `Doughnut Porro euismod facilis ad est, ipsum dicunt singulis vis ad, quaestio democritum vituperatoribus sea ex. Possit blandit eos cu, mutat iuvaret mei at. No harum aliquip detracto vel, ei vulputate scribentur vix, eum et dico appetere sadipscing. Ex vel laudem graeci. Mei ea dicant offendit vivendum, est veniam aliquid consequuntur et.`,
+//     ingredients: `Doughnut Eam omnis ipsum denique no, sint eripuit et nam. Mel in consulatu gloriatur, soluta atomorum voluptatibus no vix, ipsum vocibus neglegentur est in. Ad congue civibus similique sed, ei tantas scripserit vix. `,
+//   },
+//   {
+//     productId: 5,
+//     productName: 'Fancy Chocolate Cake',
+//     price: '$10.44',
+//     image: 'https://images.unsplash.com/photo-1586985289906-406988974504?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+//     category: 'cake',
+//     description: `Chocolate cake Quas aliquando ei per, vix libris adolescens an. Eu vis porro assum necessitatibus, ius dicant intellegam delicatissimi ex, tempor convenire accusamus eu nec. Atqui essent eam ei, tamquam sententiae his an. Pri ei erroribus expetendis, no cum vidisse ocurreret patrioque, tale vidit luptatum per eu. Mei ut natum regione atomorum, erant dolorem ad has. Quo at aeterno ullamcorper, ne discere iracundia laboramus vix, eum cu legere deseruisse. Et qui probo tamquam, pro et perfecto dissentiet, ut moderatius delicatissimi vis.`,
+//     ingredients: `Chocolate cakeChocolate cake Graeco pericula iracundia ea mea. Ex nec feugiat lucilius. Ne qui reque nominati referrentur. Accusata accusamus mea ea, periculis disputationi sea an.`,
+//   },
+//   {
+//     productId: 6,
+//     productName: 'Bon Bon Chocolate',
+//     price: '$6.99',
+//     image: 'https://images.unsplash.com/photo-1583312228158-4001fca6e316?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80',
+//     category: 'sweets',
+//     description: `Bon Bon Chocolate Ea aperiri platonem vis, in exerci nusquam indoctum nam. Regione gubergren mnesarchum at sit, tacimates indoctum constituam cu eos. Constituam concludaturque his id. Habemus singulis contentiones at vis, pro delenit platonem ad, mea nobis facilisi signiferumque ei. Ei usu quodsi vivendum facilisi, cu menandri patrioque mel, at facer corrumpit mea. Ullum aeque id duo, an nam dolore mnesarchum.`,
+//     ingredients: `Bon Bon Chocolate Ex vim nibh gubergren. Ei omnium assueverit mel. Eos et natum doctus appareat, an consul utroque reprimique vix, ne mea clita tamquam. Doctus pertinacia theophrastus eum an, eu eum phaedrum accusata.`,
+//   },
+//   {
+//     productId: 7,
+//     productName: 'Unicorn Cupcake',
+//     price: '$3.22',
+//     image: 'https://images.unsplash.com/photo-1566864399117-22c449669089?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80',
+//     category: 'cupcake',
+//     description: `Cupcake Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+//     ingredients: `Cupcake ipsum dolor sit. Amet carrot cake apple pie. Pie croissant gingerbread carrot cake dragée.`,
+//   },
+//   {
+//     productId: 8,
+//     productName: 'High-end Doughnut',
+//     price: '$10.44',
+//     image: 'https://images.unsplash.com/photo-1554886729-1a57f2750570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80',
+//     category: 'doughnut',
+//     description: `Doughnut Porro euismod facilis ad est, ipsum dicunt singulis vis ad, quaestio democritum vituperatoribus sea ex. Possit blandit eos cu, mutat iuvaret mei at. No harum aliquip detracto vel, ei vulputate scribentur vix, eum et dico appetere sadipscing. Ex vel laudem graeci. Mei ea dicant offendit vivendum, est veniam aliquid consequuntur et.`,
+//     ingredients: `Doughnut Eam omnis ipsum denique no, sint eripuit et nam. Mel in consulatu gloriatur, soluta atomorum voluptatibus no vix, ipsum vocibus neglegentur est in. Ad congue civibus similique sed, ei tantas scripserit vix. `,
+//   },
+// ];
+
+ //export { productList };
