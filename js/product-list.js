@@ -48,24 +48,24 @@ export default class ProductArchive {
       }
     });
 
-    productModal.querySelector('.product-desc-input-width').addEventListener('click', (e) => {
-      this.defaultHandler(e);
-      this.quantityHandler(productModal, e);
-    });
+    // productModal.querySelector('.product-desc-input-width').addEventListener('click', (e) => {
+    //   this.defaultHandler(e);
+    //   this.quantityHandler(productModal, e);
+    // });
   }
 
-  quantityHandler(productModal,e) {
-    let quantity = productModal.querySelector('.product-desc-input-width input').value;
-    if (e.target.innerText === '+') {
-      quantity++;
-    }
-    if (e.target.innerText === '-') {
-      quantity--;
-    }
-    if (quantity > 0) {
-      productModal.querySelector('.product-desc-input-width input').value = quantity;
-    }
-  }
+  // quantityHandler(productModal,e) {
+  //   let quantity = productModal.querySelector('.product-desc-input-width input').value;
+  //   if (e.target.innerText === '+') {
+  //     quantity++;
+  //   }
+  //   if (e.target.innerText === '-') {
+  //     quantity--;
+  //   }
+  //   if (quantity > 0) {
+  //     productModal.querySelector('.product-desc-input-width input').value = quantity;
+  //   }
+  // }
   
   arrowHandler(productModal, lastIndex, left) {
     let index = Number(productModal.dataset.arrayindex);
@@ -94,7 +94,7 @@ export default class ProductArchive {
     productModal.querySelector('.product-desc-content').children[1].innerText = targetItem.description;
     productModal.querySelector('.product-desc-content').children[3].innerText = targetItem.ingredients;
     productModal.querySelector('.price-qty>h5').innerText = targetItem.price;
-    productModal.querySelector('.product-desc-input-width input').value = 1;
+    // productModal.querySelector('.product-desc-input-width input').value = 1;
   }
 }
 
