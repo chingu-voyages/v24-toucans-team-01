@@ -164,38 +164,44 @@
 
     <div class="modal fade" id="shoppingCartPopUp" tabindex="-1" aria-labelledby="shoppingCartPopUpLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div id = "shoppingCartContent" class="modal-content">
+
           <div class="modal-header">
             <h5 class="modal-title pl-15px" id="shoppingCartPopUpLabel">Shopping cart</h5>
             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
           </div>
+
           <div class="modal-body">
             <div id="productsList" class="p-4 pt-0">
               <!--Products container-->
             </div>
-
-            <div id="totalSection" class="p-4 pt-0">
-              <div class="row px-1 py-0">
-                <div class="col-sm-3 pl-0 d-flex align-items-center justify-content-center">
-                  <p><strong>Total</strong></p>
-                </div>
-                <div class="col-sm-5 d-flex align-items-center">
-                  <strong>
-                    <p id="finalTotalDiv">
-                      <!-- Total will be dynamically generated -->
-                    </p></strong>
-                </div>
-                <button type="button" id="checkoutButton" class="btn btn-primary col-sm-4 width-27" data-dismiss="modal">Checkout</button>
-              </div>
-            </div>
-
-            <div class="modal-footer d-flex justify-content-start my-7-5px">
-              <button type="button" class="btn btn-secondary btn-sm justify-it width-20" data-dismiss="modal">Close</button>
-            </div>
           </div>
-        </div>
-      </div>
-    </div>
+
+          <div class="modal-footer d-flex"> 
+            <div class = "container">
+              <div class="row">
+                  <div class="col-sm-3 p-4 d-flex justify-content-center">
+                    <strong>
+                      <p id = "totalText">Total</p>
+                    </strong>
+                  </div>                   
+                <div class="col-sm-4 d-flex align-items-center pr-0">
+                      <p id="finalTotalDiv">
+                        <!-- Total will be dynamically generated -->
+                      </p>
+                </div>
+
+                <div class="col-sm-5 d-flex align-items-center justify-content-center pl-0">
+                    <button type="button" id="checkoutButton" class="btn btn-primary width-80" data-dismiss="modal">Checkout</button>
+                </div>
+
+              </div> <!--row-->
+            </div> <!--container-->
+  
+          </div> <!--modal footer-->
+        </div> <!--modal content-->
+      </div> <!--modal dialog-->
+    </div> <!--modal-->
 
     <!--End of shopping cart-->
 
