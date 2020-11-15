@@ -13,7 +13,7 @@ This app was created for the Chingu Voyage 24. It is a  frontend API-ready secti
  - Products in the Store section are being  generated dynamically via  JSON objects with possibility to use custom APIs
  - Add-to-cart function for every product on the page 
  - Product sorting function for various categories (cakes, sweets, etc...)
- - Product search function
+ - Product case sensitive search function
  - Cart total product calculation and update if necessary
  - Various styling effects: background video in the  hero section which changes to static image for lower resolution, parallax scroll & scrollspy 
  
