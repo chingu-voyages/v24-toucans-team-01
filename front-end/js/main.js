@@ -47,7 +47,7 @@ fetchAllProducts().then( products =>{
   });
   //const array = products.productListArray.filter(product => product.productName.includes(e.target.value));
   //NewList = new ProductArchive(array);
-  console.log(NewList);
+  //console.log(NewList);
   NewList = new ProductArchive(refined);
   NewList.displayProducts();
 })}).catch(e => console.log("hello error",e));
