@@ -6,7 +6,7 @@ import { populateShoppingCart }  from './shoppingCart.js';
 
 navBarDisplay(); 
 
-fetchAllProducts();
+//fetchAllProducts();
 document.querySelector('.product-categories').addEventListener('click', (e) => {
   e.stopPropagation();
   e.preventDefault();
