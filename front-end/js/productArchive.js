@@ -26,7 +26,7 @@ export default class ProductArchive {
     const lastIndex = this.productListArray.length - 1;
     const productModal = document.querySelector('.modal.product-desc');
 
-    let old_arrowleft = productModal.querySelector('.product-carousel-arrow-right');
+    let old_arrowleft = productModal.querySelector('.product-carousel-arrow-left');
     let new_arrowleft = old_arrowleft.cloneNode(true);
     old_arrowleft.parentNode.replaceChild(new_arrowleft, old_arrowleft);
     
