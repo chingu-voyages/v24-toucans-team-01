@@ -111,7 +111,7 @@ export async function fetchAllProducts() {
   let DefaultProducts;
   document.querySelector('.product-cards').textContent='';
   try {
-  const response = await fetch('http://localhost:3000/products')
+  const response = await fetch('https://peaceful-eyrie-59012.herokuapp.com/products');
   const data = await response.json();
   
   data.forEach((item) => {
@@ -141,7 +141,7 @@ export async function fetchProductsByCategory(category) {
   document.querySelector('.product-cards').textContent = '';
   document.querySelector('.product-search-box input').value='';
   try {
-    const response = await fetch(`http://localhost:3000/products/category/${category}`);
+    const response = await fetch(`https://peaceful-eyrie-59012.herokuapp.com/products/category/${category}`);
     const data = await response.json();
 
     data.forEach((item) => {
