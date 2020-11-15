@@ -958,6 +958,28 @@ cursor: pointer;
 }
 
 
+#shoppingCartPopUp .input-group{
+  width: 90%;
+}
+@media screen and (max-width: 400px){
+  #shoppingCartPopUp  #middleColumn{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  #shoppingCartPopUp #trashColumn{
+    width: 1%;
+  }
+
+  #shoppingCartPopUp #middleColumn, #inputColumn, #trashColumn{
+    margin-top: 12px;
+  }
+
+  #shoppingCartPopUp #checkoutButton{
+    margin-bottom: 15px;
+  }
+}
+
 .text-1-5rem {
   font-size: 1.5rem;
 }

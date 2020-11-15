@@ -19,12 +19,12 @@ function populateShoppingCart(productId, productName, productPrice, productImage
   productContainerNode.classList.add('product-container');
   productContainerNode.id = 'productContainer' + productId;
   productContainerNode.innerHTML = `<div class="row px-1rem">
-  <div class="col-sm-3 pl-0">
+  <div class="col-12 col-sm-3 pl-0">
     <div class="d-flex justify-content-center">
       <img class="square-cropped-100px border-radius-100" src=${productImage} alt="" />
     </div>
   </div>
-  <div class="col-sm-5 d-flex flex-column pr-0">
+  <div class="col-6 col-sm-5 d-flex flex-column pr-0" id = "middleColumn">
     <div class="my-auto">
     <p class = "product-name">${productName}</p>
       <div class = "product-price-div">
@@ -33,8 +33,8 @@ function populateShoppingCart(productId, productName, productPrice, productImage
       </div>
     </div>
   </div>
-  <div class="col-sm-3 d-flex align-items-center justify-content-between pl-0">
-    <div class="input-group width-90">
+  <div class="col-4 col-sm-3 d-flex align-items-center justify-content-between pl-0" id = "inputColumn">
+  <div class="input-group">
       <button id="minusButton${productId}" class="minus-button btn btn-outline-secondary btn-sm text-1-5rem">-</button
       ><input
         id = "quantity${productId}"
@@ -46,7 +46,7 @@ function populateShoppingCart(productId, productName, productPrice, productImage
       /><button id="plusButton${productId}" class="plus-button btn btn-outline-secondary btn-sm text-1-5rem">+</button>
     </div>
   </div>
-  <div class="col-sm-1 d-flex align-items-center p-0"><i id="trashButton${productId}" class="trash-button fa fa-trash"></i></div>
+  <div class="col-2 col-sm-1 d-flex align-items-center p-0" id="trashColumn"><i id="trashButton${productId}" class="trash-button fa fa-trash"></i></div>
 </div>`;
 
   if (!productIds.includes(productId)) {

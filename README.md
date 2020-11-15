@@ -27,6 +27,12 @@ This app was created for the Chingu Voyage 24. It is a  frontend API-ready secti
 7. Images from [Unsplash](https://unsplash.com/) & background video from [Coverr](https://coverr.co/)
 8. Gradients inspired by [Colorzilla](https://www.colorzilla.com/gradient-editor/)
 
+## Running the project locally
+From the repo:
+1. Clone the project locally
+2. Run `npm install` in your bash\command line
+3. Run `npm start` in your bash\command line
+
 ## This project is using the airbnb style guide, please follow the steps bellow for installation
 
 ### Installation
