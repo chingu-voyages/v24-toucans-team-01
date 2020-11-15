@@ -37,3 +37,13 @@ document.querySelector('#product-modal .add-to-cart').addEventListener('click', 
   }
 });
 scroll();
+fetch('https://sleepy-inlet-22959.herokuapp.com/products/')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log('error!');
+  });

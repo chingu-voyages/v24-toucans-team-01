@@ -98,6 +98,8 @@ export default class ProductArchive {
   }
 }
 
+
+
 const productList = [
   {
     productId: 1,
@@ -173,4 +175,4 @@ const productList = [
   },
 ];
 
-export { productList };
+ export { productList };
