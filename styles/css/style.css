@@ -870,18 +870,93 @@ body.modal-open {
 }
 
 /*Shopping Cart*/
+#shoppingCartContent{
+  -webkit-box-shadow: 1px 1px 5px #362478;
+          box-shadow: 1px 1px 5px #362478;
+  border-radius: 12px;
+  }
+
 #shoppingCartPopUp p {
   margin-bottom: 0px;
   font-size: 1.5rem;
 }
 
+#shoppingCartPopUp .product-name{
+  font-weight: bold;
+}
+
+.product-name, .pricePerUnit, .priceTotal{
+  color: #362478;
+}
+
+#totalText{
+  color: #362478;
+  font-size: 2.5rem !important;
+  font-family: 'Kaushan Script', cursive;
+}
+
+#finalTotalDiv{
+  color: #b02db0;
+  font-size: 2.5rem !important;
+}
+
+
 #shoppingCartPopUp button {
   font-size: 1.5rem !important;
 }
 
+#shoppingCartPopUp #checkoutButton{
+  display: inline;
+  font-family: 'Kaushan Script', cursive;
+  color: white;
+  height: 5rem;
+  border: 2px solid #362478;
+  border-radius: 8px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #362478;
+  cursor: pointer;
+}
+
+#shoppingCartPopUp #checkoutButton:hover {
+  background-color: #b02db0;
+  color: white;
+  border: none;
+}
+
+#shoppingCartPopUp .minus-button:hover, .plus-button:hover {
+  background-color: #e5e5fc;
+  color: #362478;
+}
+
+
 #shoppingCartPopUp h5 {
   font-size: 3rem;
+  font-family: 'Kaushan Script', cursive;
+    color: #b02db0;
 }
+
+#shoppingCartPopUp .minus-button {
+  border-radius: 8px 0px 0px 8px;
+}
+
+#shoppingCartPopUp .plus-button{
+  border-radius: 0px 8px 8px 0px;
+}
+
+#shoppingCartPopUp .minus-button, .plus-button{
+color: #362478;
+border: 1px solid #362478;
+background-color: white;
+cursor: pointer;
+}
+
+#shoppingCartPopUp input{
+  color: #362478;
+  border-top: 1px solid #362478;
+  border-bottom: 1px solid #362478;
+}
+
 
 .text-1-5rem {
   font-size: 1.5rem;
@@ -915,8 +990,16 @@ input[type='number'] {
      object-fit: cover;
 }
 
+.width-100{
+  width:100%;
+}
+
 .width-90 {
   width: 90%;
+}
+
+.width-80{
+  width: 80%;
 }
 
 .width-20 {

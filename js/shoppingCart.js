@@ -26,7 +26,7 @@ function populateShoppingCart(productId, productName, productPrice, productImage
   </div>
   <div class="col-sm-5 d-flex flex-column pr-0">
     <div class="my-auto">
-      <p>${productName}</p>
+    <p class = "product-name">${productName}</p>
       <div class = "product-price-div">
         <p id = "pricePerUnit${productId}" class = "pricePerUnit" style = "display: block">${productPrice}</p>
         <p id = "priceTotal${productId}" class = "priceTotal" style = "display: none !important"></p>
